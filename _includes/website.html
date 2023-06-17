@@ -1,0 +1,57 @@
+<section class="website grid-container" id="website">
+  <div class="grid-x website-wrapper">
+    <div class="grid-x cell website-content">
+      <div class="grid-x cell header-section align-middle">
+        <div class="grid-x cell shrink mac-buttons">
+          <div class="cell shrink close"></div>
+          <div class="cell shrink minimize"></div>
+          <div class="cell shrink maximize"></div>
+        </div>
+        <div class="cell grid-x auto address-bar">
+          <div class="cell left-bar auto">
+            <i class="fas fa-lock"></i>
+            {%- include external-link.html link="https://rehanbutt.com" content="rehanbutt.com" -%}
+          </div>
+          <div class="cell right-bar grid-x align-middle shrink">
+            <div class="shrink cell mickey-container">
+              <!-- <img class="mickey" src="/img/mickey.svg" alt="Mickey Silhouette"> -->
+              {% capture location %}website{% endcapture %}
+              {% include mickey.svg %}
+            </div>
+            <div class="shrink cell">
+              <i class="fas fa-redo"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-x cell main-area">
+        <div class="cell small-12 medium-5 text-area">
+          <img class="fig" src="/img/fig.svg" alt="Illustration of a Fig">
+          <h2>Launched v6 Fig</h2>
+          <p>With this release Resources received a major overhaul. Collections, Recently Added & Content Types were added. Plus styling updates across the board!</p>
+          <a href="https://rehanbutt.com/resources" target="_blank">Explore Resources</a>
+        </div>
+        <div class="grid-x cell small-12 medium-auto">
+          <div class="cell small-6">
+            <a href="https://rehanbutt.com/resources/collection/shared-architecture-apple-pixar" target="_blank">
+              <div class="card-collection">
+                <img src="/img/pixar-apple.png" alt="A stylized illustration of the Luxo Pixar ball sitting on the ground of the Apple Park at dusk">
+                <p class="title">The Shared Architecture of Pixar & Apple</p>
+                <p class="sub-header">Deep Dive</p>
+              </div>
+            </a>
+          </div>
+          <div class="cell small-6">
+            <a href="https://rehanbutt.com/resources/collection/tech-go-tos" target="_blank">
+              <div class="card-collection">
+                <img src="/img/tech-go-to.png" alt="A stylized illustration of a computer mouse and a Macbook charger">
+                <p class="title">My Tech Go Tos</p>
+                <p class="sub-header">Leveling Up</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

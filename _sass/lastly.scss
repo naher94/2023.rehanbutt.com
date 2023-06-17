@@ -1,0 +1,113 @@
+.lastly{
+  margin-top: 2rem;
+  @include breakpoint(small only){
+    margin-top: 1rem;
+    font-size: 0.5em;
+  }
+  .card{
+    background-color: #F3F3F3;
+    border-radius: $tile-radius-medium;
+    margin-bottom: 0;
+    $card-padding: 2rem;
+    $card-padding-mobile: 1rem;
+    @media (prefers-color-scheme: dark) {
+      background-color: $navy-black;
+    }
+    @include breakpoint(small only){
+      padding: $card-padding-mobile;
+    }
+    padding: $card-padding;
+    color: $navy-black;
+    border: none;
+    .color-field{
+      background: radial-gradient(circle at 0 0, #BC2649, #8D1934);
+      padding: 3em;
+      border-radius: 10px;
+      @include breakpoint(small only){
+        border-radius: 0.5rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        background: radial-gradient(circle at 0 0, #621325, #430917);
+        
+      }
+    }
+    h2{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      font-size: 5em;
+      color: $pure-white;
+      @include breakpoint(small only){
+        line-height: 1;
+        padding: 0;
+      }
+    }
+    h3{
+      font-family: $lato;
+      line-height: 1.2;
+      font-size: 2em;
+      color: $pure-white;
+    }
+    .polaroid-chin{
+      padding-top: $card-padding;
+      color: semantic-color(text);
+      @include breakpoint(small only){
+        padding-top: $card-padding-mobile;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-bottom: 0;
+      }
+      .hidden-mickey{
+        font-family: $lato;
+        font-size: 1.5rem;
+        @include breakpoint(small only){
+          font-size: 1rem;
+        }
+        .question{
+          font-weight: $lato-bold;
+        }
+      }
+      p{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    }
+    .share-area{
+      font-family: $zilla;
+      @include breakpoint(small only){
+        font-size: 1rem;
+        margin-top: 1em;
+        justify-content: space-between;
+      }
+      .words{
+        margin-inline-end: 0.5rem;
+      }
+      .enjoyed{
+        font-weight: $zilla-bold;
+      }
+      a{
+        color: semantic-color(text);
+        &:hover{
+          .share-item{
+            background-color: rgba($navy-black, 0.10);
+            @media (prefers-color-scheme: dark) {
+              background-color: rgba($navy-black-l1, 0.75);
+            }
+          }
+        }
+        .share-item{
+          aspect-ratio: 1/1;
+          padding: 0.75em;
+          border-radius: $pill-radius;
+          text-align: center;
+          transition: $sprint;
+          i{
+            font-size: 1.3em;
+            vertical-align: text-top;
+          }
+        }
+      }
+    }
+  }
+}

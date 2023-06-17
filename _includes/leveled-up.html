@@ -1,0 +1,19 @@
+{% assign skills-list = "Design Ops,Product Management,Systems Design,Mentoring,Process Design,Remote Research,Team Manangement,UX Writing,Data Analysis,Motion Design,Prototyping,Movie Making,Project Management,Teaching,Content Strategy, Discovery Research, Product Development" | split: ',' %}
+
+<section class="leveled-up grid-container" id="skills">
+  <div class="grid-x cell skills-card">
+    <div class="pill-container cell grid-x align-justify">
+      {%- for skill in skills-list -%}
+        <div class="pill">{{skill}}</div>
+      {%- endfor -%}
+    </div>
+    <div class="cell grid-x align-center text-container">
+      <div class="cell small-12 medium-6">
+        <p>Continued to sharpen my skills and acquired some new ones!</p>
+      </div>
+      <div class="cell">
+        <h2>Skills</h2>
+      </div>
+    </div>
+  </div>
+</section>

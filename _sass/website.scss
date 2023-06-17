@@ -1,0 +1,182 @@
+.website{
+  margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
+  .website-wrapper{
+    background-color: semantic-color(joined-card-bg);
+    border-radius: $tile-radius-medium;
+    padding: 2rem;
+    @include breakpoint(small only) {
+      padding: 1rem;
+    }
+  }
+  .website-content{
+    .header-section{
+      .mac-buttons{
+        margin-inline-end: 1rem;
+        @include breakpoint(small only) {
+          margin-inline-end: 0.5rem;
+        }
+        div{
+          border-radius: $pill-radius;
+          border: 1px solid rgba($pure-black, 0.1);
+          width: 1em;
+          height: 1em;
+          margin-inline-end: 0.5rem;
+        }
+        .close{
+          background-color: #FF3B30;
+        }
+        .minimize{
+          background-color: #FFCC00;
+        }
+        .maximize{
+          background-color: #34C759;
+        }
+      }
+      .address-bar{
+        background-color: $pure-white;
+        border: 1px solid rgba($pure-black, 0.1);
+        border-radius: $tile-radius;
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+        @media (prefers-color-scheme: dark) {
+          background-color: $navy-black;
+        }
+        .fa-lock{
+          margin-inline-end: 0.5em;
+        }
+        a{
+          font-weight: $lato-bold;
+          color: $navy-black;
+          @media (prefers-color-scheme: dark) {
+            color: $pure-white;
+          }
+        }
+        .mickey-container{
+          margin-inline-end: 0.5em;
+          .mickey-website{
+            height: 1em;
+            // TODO check if margin is still needed with inline SVG method
+            // margin-bottom: 0.25em;
+            fill: $navy-black;
+            @media (prefers-color-scheme: dark) {
+              fill: $pure-white;
+            }
+          }
+        }
+        .fa-redo{
+          &:hover{
+            transform: rotate(360deg);
+            transition: $run;
+          }
+        }
+      }
+    }
+    .main-area{
+      background-color: $pure-white;
+      border-radius: $tile-radius;
+      border: 1px solid rgba($pure-black, 0.1);
+      margin-block-start: 1rem;
+      color: #78345C;
+      padding: 2em;
+      @media (prefers-color-scheme: dark) {
+        background-color: $navy-black;
+        // color: #ef66bd;
+        color: $pure-white;
+      }
+      @include breakpoint(small only) {
+        padding: 1em;
+      }
+      .text-area{
+        padding-right: 2em;
+        @include breakpoint(small only) {
+          padding-right: 0;
+          margin-bottom: 2em;
+        }
+        p{
+          margin-bottom: 1em;
+        }
+        a{
+          margin-top: 0.5em;
+          padding: 0.25em 0.75em;
+          border-radius: $pill-radius;
+          border: solid 2px #78345C;
+          color: inherit;
+          transition: $sprint;
+          &:hover{
+            color: white;
+            background-color: #78345C;
+          }
+        }
+      }
+      .fig{
+        width: 5em;
+        @include breakpoint(small only) {
+          width: 4em;
+        }
+      }
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-bold;
+        @include breakpoint(small only) {
+          font-size: 2em;
+          padding: 0;
+          margin-top: 0.25em;
+        }
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      .card-collection{
+        border-radius: $tile-radius;
+        padding: 1em;
+        color: white;
+        background-color: $navy-black;
+        aspect-ratio: 3/4;
+        transition: $sprint;
+        position: relative;
+        overflow: hidden;
+        margin: 0.25em;
+        @include breakpoint(small only) {
+          font-size: 1em;
+          padding: 0.5em;
+        }
+        p{
+          padding: 0;
+          margin: 0;
+        }
+        .title{
+          font-family: $zilla;
+          font-weight: $zilla-bold;
+          font-size: 1.5em;
+          line-height: normal;
+          position: relative;
+          @include breakpoint(small only) {
+            font-size: 1em;
+          }
+        }
+        .sub-header{
+          text-transform: uppercase;
+          letter-spacing: 0.3em;
+          font-size: 0.6em;
+          font-weight: $lato-bold;
+          opacity: 0.6;
+          position: relative;
+        }
+        &:hover{
+          transform: rotate(4deg) scale(1.05);
+          box-shadow: $recessed-shadow semantic-color(shadow);
+          z-index: 1;
+        }
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

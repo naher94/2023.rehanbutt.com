@@ -1,0 +1,117 @@
+.leveled-up{
+  overflow: hidden;
+  margin-top: 2rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
+  .skills-card{
+    border-radius: $tile-radius-medium;
+    position: relative;
+    overflow: hidden;
+    padding: 2em 2em 0 2em;
+    box-shadow: inset 0px 0px 0px 5px rgba($pure-black, 0.1);
+    @include breakpoint(small only) {
+      padding: 1em 1em 0 1em;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      background: url(/img/sulley.png);
+      width: 130%;
+      aspect-ratio: 4/3;
+      bottom: -110%;
+      left: -25%;
+      z-index: -1;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(190deg);
+      @include breakpoint(small only) {
+        width: 250%;
+        bottom: -40%;
+        left: -50%;
+        transform: rotate(105deg);
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(.7);
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      background: url(/img/mango.png);
+      width: 135%;
+      aspect-ratio: 4/3;
+      top: -120%;
+      right: -40%;
+      z-index: -1;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(55deg);
+      @include breakpoint(small only) {
+        width: 220%;
+        top: -30%;
+        left: -105%;
+        right: 0;
+        transform: scaleX(-1) rotate(90deg);
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(.7);
+      }
+    }
+  }
+  .pill-container{
+    text-align: center;
+    margin-bottom: 2em;
+    @include breakpoint(small only) {
+      justify-content: unset;
+      margin-bottom: 2em;
+    }
+    .pill{
+      font-size: 1em;
+      color: $navy-black;
+      background-color: rgba($pure-white, 0.5);
+      border-radius: $pill-radius;
+      font-weight: $lato-bold;
+      display: inline-block;
+      padding: 0.2em 0.8em;
+      margin: 0.3em 0.25em;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      @include breakpoint(small only) {
+        font-size: 0.8em;
+      }
+      @media (prefers-color-scheme: dark) {
+        color: $pure-white;
+        background-color: rgba($navy-black-d3, 0.5);
+      }
+    }
+  }
+  .text-container{
+    text-align: center;
+    margin-top: 1em;
+    h2{
+      font-family: $lato;
+      font-weight: $lato-black;
+      font-size: 10em;
+      margin-bottom: 0;
+      line-height: 0.7;
+      @include breakpoint(small only) {
+        font-size: 7em;
+      }
+    }
+    p{
+      font-family: $lato;
+      font-weight: $lato-bold;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+      margin-bottom: 1em;
+      @include breakpoint(small only) {
+        font-size: 1em;
+      }
+    }
+  }
+}

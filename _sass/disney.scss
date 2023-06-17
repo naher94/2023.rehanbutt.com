@@ -1,0 +1,95 @@
+.disney{
+  margin-top: 2rem;
+  color: $pure-white;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
+  .content-area{
+    background: linear-gradient(to bottom right, #21195B 0%, #73467F 100%);
+    border-radius: $tile-radius-medium;
+    overflow: hidden;
+    position: relative;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(to bottom right, #181243 0%, #4e2f56 100%);
+    }
+    &::before{
+      content: "";
+      background-image: url(/img/disney-skyline.svg);
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+    }
+    .text-area{
+      z-index: 1;
+      padding-right: 4rem;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      @include breakpoint(small only) {
+        padding: 1.5rem;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+        i{
+          font-size: 0.8em;
+          padding-left: 0.25em;
+          padding-right: 0.25em;
+        }
+      }
+      .logo-container{
+        text-align: center;
+        margin-bottom: 2rem;
+        @include breakpoint(small only) {
+          text-align: center;
+          // TODO hide the logo?
+          // display: none;
+          img{
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .mickey-image{
+    background-image: url(/img/atthehat.jpg);
+    // background-size: cover;
+    // background-position: center;
+
+    background-size: 110%;
+    background-position: center bottom;
+
+    background-repeat: no-repeat;
+
+    mask-image: url(/img/mickey-mask.svg);
+    mask-size: 110%;
+    mask-repeat: no-repeat;
+    mask-position: -5rem, center;
+
+    -webkit-mask-image: url(/img/mickey-mask.svg);
+    -webkit-mask-size: 110%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: -5rem, center;
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.8); //Matches that of all images
+    }
+    @include breakpoint(small only) {
+      margin-top: -5em;
+      aspect-ratio: 3/4;
+      width: 100%;
+      background-size: 130%;
+
+      mask-size: 130%;
+      mask-repeat: no-repeat;
+      mask-position: -5.5rem, center;
+
+      -webkit-mask-size: 130%;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: -5.5rem, center;
+    }
+  }
+}

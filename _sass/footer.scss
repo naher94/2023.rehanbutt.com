@@ -1,0 +1,55 @@
+footer{
+  position: relative;
+  color: $pure-white;
+  font-family: $zilla;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  @include breakpoint(small only){
+    margin-top: 1rem;
+  }
+  .content-area{
+    background: $pure-black;
+    padding: 3rem;
+    border-radius: $tile-radius-medium;
+    @include breakpoint(small only){
+      padding: 1rem;
+    }
+  }
+  .next-year{
+    padding: 0 4rem;
+    @include breakpoint(small only){
+      padding: 0;
+    }
+  }
+  .title-area{
+    margin-top: 5rem;
+    @include breakpoint(small only){
+      margin-top: 3rem;
+      padding: 0 0.25em;
+    }
+  }
+  .subtitle{
+    font-family: $big-shoulders;
+    font-weight: $big-shoulders-black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    @include breakpoint(small only) {
+      font-size: 1rem;
+    }
+  }
+  .logo{
+    #rehan-logo-footer{
+      height: 30px;
+      transition: $sprint;
+      &:hover{
+        transform: scale(1.1);
+      }
+      g{
+        fill:$pure-white; //Changes the color of my logo inline
+      }
+      @include breakpoint(small only){
+        height: 22px;
+      }
+    }
+  }
+}

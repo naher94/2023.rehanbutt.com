@@ -1,0 +1,11 @@
+<svg class="bite-marks" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 329 304" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <clipPath id="a">
+    <path clip-rule="evenodd" d="m0 0h380v331h-380z"/>
+  </clipPath>
+  <g transform="scale(.864951 .915568)">
+    <path d="m0 0h380v331h-380z" fill="none"/>
+    <g clip-path="url(#a)">
+      <path d="m379.993 247.333c.005.388.007.777.007 1.167 0 52.743-42.533 95.5-95 95.5-38.16 0-71.065-22.618-86.173-55.245-12.367 5.927-26.212 9.245-40.827 9.245-52.467 0-95-42.757-95-95.5 0-1.349.028-2.691.083-4.026-36.766-13.177-63.083-48.486-63.083-89.974 0-52.743 42.533-95.5 95-95.5.584 0 1.167.005 1.748.016h283.252v234.317z" transform="matrix(1.15613 0 0 1.09222 0 -44.7231)"/>
+    </g>
+  </g>
+</svg>
