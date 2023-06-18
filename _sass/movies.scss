@@ -57,7 +57,7 @@
     .top-picks{
       margin-block-start: -2em;
       .poster-box{
-        margin-inline-end: -2em;
+        margin-inline-end: -1.5em; //create the poster overlap effect
         &:nth-of-type(1){
           z-index: 3;
           .poster{
@@ -81,7 +81,7 @@
         }
       }
       .poster-container{
-        margin-inline-end: 2em; //Adjusting for the negative margin of the poster overlaps
+        margin-inline-end: 1.5em; //Adjusting for the negative margin of the poster overlaps
       }
       .poster{
         position: relative;
@@ -242,8 +242,8 @@
       .poster{
         max-width: 3em;
         position: absolute;
-        left: -36%;
-        top: -12%;
+        left: 0;
+        top: 0;
         transform-origin: bottom right;
         transition: $run;
         @include breakpoint(small only) {
