@@ -74,71 +74,50 @@
           <div class="divider-line"></div>
         </div>
       </div>
-      <div class="stats-container">
+      <div class="stats-container grid-x cell">
+        <div class="total-watched cell small-4">
+          <div class="text-container">
+            <p>watched</p>
+            <p class="number">120</p> 
+            <p>featured films</p>
+            <p class="sub-description"><i class="fas fa-history"></i> 49% were rewatches</p>
+          </div>
+        </div>
+        <div class="busy-day cell small-4">
+          <div class="text-container">
+            <p>Saturday</p>
+            <p class="number">Jun 18th</p> 
+            <p>was the busiest watch day with 6 movies</p>
+          </div>
+          <div class="average grid-x align-middle align-center">
+            <div class="monthly grid-x align-middle align-center">
+              {% capture name %}8{% endcapture %}
+              {% include popcorn.svg %}
+              <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
+                <p class="number cell shrink">10</p>
+                <p class="description cell small-4">monthly average</p>
+              </div>
+            </div>
+            <div class="daily grid-x align-middle align-center">
+              {% capture name %}9{% endcapture %}
+              {% include popcorn.svg %}
+              <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
+                <p class="number cell shrink">4</p>
+                <p class="description cell small-5">weekly average</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="first-watch cell small-4">
+          <div class="text-container">
+            <p class="number">Yesterday</p> 
+            <p>1st watched</p>
+          </div>
+          <div class="poster">
+            <img src="/img/movie-yesterday.jpg" alt="Yesterday Poster">
+          </div>
+        </div>
 
-      </div>
-      
-      <div class="total-watched">
-        <div class="text-container">
-          <p>watched</p>
-          <p class="number">120</p> 
-          <p>featured films</p>
-          <p class="sub-description"><i class="fas fa-history"></i> 49% were rewatches</p>
-        </div>
-      </div>
-      <div class="busy-day">
-        <div class="text-container">
-          <p>Saturday</p>
-          <p class="number">Jun 18th</p> 
-          <p>was the busiest watch day with 6 movies</p>
-        </div>
-        <div class="average grid-x align-middle align-center">
-          <div class="monthly grid-x align-middle align-center">
-            {% capture name %}8{% endcapture %}
-            {% include popcorn.svg %}
-            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">10</p>
-              <p class="description cell small-4">monthly average</p>
-            </div>
-          </div>
-          <div class="daily grid-x align-middle align-center">
-            {% capture name %}9{% endcapture %}
-            {% include popcorn.svg %}
-            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">4</p>
-              <p class="description cell small-5">weekly average</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="first-watch">
-        <div class="text-container">
-          <p class="number">Yesterday</p> 
-          <p>1st watched</p>
-        </div>
-        <div class="poster">
-          <img src="/img/movie-yesterday.jpg" alt="Yesterday Poster">
-        </div>
-      </div>
-      <div class="rewatch">
-        <div class="text-container">
-          <p class="grid-x align-middle"><i class="fas fa-history"></i> rewatched</p>
-          <p class="number">Harry Potter</p> 
-          <p>collection</p>
-        </div>
-        <div class="poster-stack">
-          <div class="poster-hold">
-            <div class="poster">
-              <img src="/img/movie-harry-potter3.jpg" alt="Harry Potter and the Prisoner of Azkaban poster">
-            </div>
-            <div class="poster">
-              <img src="/img/movie-harry-potter2.jpg" alt="Harry Potter and the Chamber of Secrets poster">
-            </div>
-            <div class="poster">
-              <img src="/img/movie-harry-potter1.jpg" alt="Harry Potter and the Sorcerer Stone poster">
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

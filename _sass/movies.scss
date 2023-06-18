@@ -1,5 +1,3 @@
-$movie-list-text-shadow: 0 0 10px $pure-black;
-
 .movies{
   margin-top: 30rem;
   @include breakpoint(small only) {
@@ -96,7 +94,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           border-radius: $pill-radius;
           padding: 0.5em;
           text-align: center;
-          border: solid $navy-black-l9; //TODO semantic color
+          border: 0.2em solid $navy-black-l9; //TODO semantic color
         }
         p{
           padding: 0;
@@ -104,7 +102,7 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
           font-family: $lato;
           font-weight: $lato-black;
           font-size: 2em;
-          line-height: 0.8;
+          line-height: 0.75; //adjust to visually center when adjusting the border of .number
         }
         img{
           border-radius: $tile-radius;
@@ -135,7 +133,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         margin: 0;
         padding: 0;
         line-height: 1;
-        text-shadow: $movie-list-text-shadow;
       }
       .number{
         font-weight: $big-shoulders-black;
@@ -180,7 +177,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         margin: 0;
         padding: 0;
         line-height: 1;
-        text-shadow: $movie-list-text-shadow;
       }
       .number{
         font-weight: $big-shoulders-black;
@@ -238,7 +234,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         margin: 0;
         padding: 0;
         line-height: 1;
-        text-shadow: $movie-list-text-shadow;
       }
       .number{
         font-weight: $big-shoulders-black;
@@ -257,84 +252,6 @@ $movie-list-text-shadow: 0 0 10px $pure-black;
         img{
           border-radius: $tile-radius;
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
-        }
-      }
-    }
-    .rewatch{
-      font-size: 1.35em;
-      position: relative;
-      &:hover{
-        .poster-stack{
-          .poster-hold{
-            .poster{
-              &:nth-of-type(1){
-                transform: rotate(24deg);
-              }
-              &:nth-of-type(2){
-                transform: rotate(12deg);
-              }
-            }
-          }
-        }
-      }
-      .text-container{
-        position: relative;
-        z-index: 2;
-        p{
-          &:first-of-type{
-            i{
-              font-size: 0.6em;
-              margin-right: 0.25em;
-              margin-top: 0.1em;
-            }
-          }
-        }
-      }
-      p{
-        font-family: $big-shoulders;
-        margin: 0;
-        padding: 0;
-        line-height: 1;
-        text-shadow: $movie-list-text-shadow;
-      }
-      .number{
-        font-weight: $big-shoulders-black;
-        font-size: 2em;
-      }
-      .poster-stack{
-        position: absolute;
-        right: 10%;
-        top: -15%;
-        transform: rotate(10deg);
-        .poster-hold{
-          position: relative;
-        }
-        .poster{
-          max-width: 4em;
-          transform-origin: bottom left;
-          transition: $run;
-          img{
-            border-radius: $tile-radius;
-            box-shadow: $centered-shadow rgba($pure-black, 0.5);
-          }
-          //bottom of the stack
-          &:nth-of-type(1){
-            transform-origin: bottom left;
-            top: 0;
-            transform: rotate(16deg);
-          }
-          &:nth-of-type(2){
-            position: absolute;
-            transform-origin: bottom left;
-            top: 0;
-            transform: rotate(8deg);
-          }
-          //top one in the stack
-          &:nth-of-type(3){
-            position: absolute;
-            transform-origin: bottom left;
-            top: 0;
-          }
         }
       }
     }
