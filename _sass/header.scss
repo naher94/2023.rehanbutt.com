@@ -14,8 +14,9 @@ header{
       grid-template-columns: repeat(auto-fit,  minmax(10px, max-content));
       font-family: $big-shoulders;
       font-weight: $big-shoulders-black;
-      font-size: 70vw;
-      margin-inline-start: -0.1em; //TODO
+      $number-font-size: 76vw;
+      font-size: $number-font-size;
+      margin-inline-start: calc($number-font-size * -0.11);
       @include breakpoint(xxlarge up){
         font-size: 62em;
         margin-inline-start: -0.09em; //TODO
@@ -54,7 +55,7 @@ header{
         transform: scale(1.1);
       }
       g{
-        fill:semantic-color(text); //Changes the color of my logo inline //TODO
+        fill:semantic-color(text); //Changes the color of my logo inline
       }
       @include breakpoint(small only){
         height: 22px;
