@@ -5,7 +5,7 @@
   }
   .content-area{
     border-radius: $tile-radius-medium;
-    background: linear-gradient(125deg, rgba(22,63,114,1) 0%, rgba(43,127,160,1) 100%); //TODO semantic color
+    background: linear-gradient(to bottom right, rgba(22,63,114,1) 0%, rgba(43,127,160,1) 100%); //TODO semantic color
     position: relative;
     padding: 2em;
     &:before{
