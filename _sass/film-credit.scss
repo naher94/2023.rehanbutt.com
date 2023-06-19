@@ -1,0 +1,16 @@
+.film-credit{
+  margin-top: 30rem;
+  @include breakpoint(small only) {
+    margin-top: 1rem;
+  }
+  .content-area{
+    border-radius: $tile-radius-medium;
+    background-color: $navy-black-l9; //TODO replace with sematic color
+    font-family: $big-shoulders;
+    padding: 2em;
+    position: relative;
+    @include breakpoint(small only) {
+      padding: 1em;
+    }
+  }
+}
