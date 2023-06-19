@@ -2,32 +2,27 @@ header{
   border-radius: $tile-radius-medium;
   padding: 3rem;
   margin-block-start: 3rem;
-  // color: semantic-color(header-content);
-  // background: radial-gradient(circle at top left, rgba(102,255,246,1) 0%, rgba(169,101,255,1) 100%);
-  // position: relative;
   font-family: $big-shoulders;
   font-weight: $big-shoulders-black;
   @include breakpoint(small only) {
     padding: 1rem;
   }
-  @media (prefers-color-scheme: dark) {
-    background: radial-gradient(circle at top left, rgb(73, 185, 177) 0%, rgb(106, 64, 162) 100%);
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   background: radial-gradient(circle at top left, rgb(73, 185, 177) 0%, rgb(106, 64, 162) 100%);
+  // }
   .number-container{
-    margin-top: -5em;
+    margin-top: -10em; //TODO
     h1{
       justify-content: space-between;
       display: grid;
       grid-template-columns: repeat(auto-fit,  minmax(10px, max-content));
-      margin-inline-start: -0.075em;
+      margin-inline-start: -0.1em;
     }
   }
   .title-area{
     z-index: 2;
-    color: green;
-    // margin-bottom: 5rem;
+    color: semantic-color(text);
     // @include breakpoint(small only) {
-    //   margin-bottom: 3rem;
     // }
   }
   .subtitle{
@@ -40,11 +35,13 @@ header{
   h1{
     font-family: $big-shoulders;
     font-weight: $big-shoulders-black;
-    font-size: 50rem;
+    // font-size: 80rem; //size needs to respond to the width of the window
+    font-size: max(25vw, 60em); //TODO
     span{
-      // background: radial-gradient(circle at top left, rgb(73, 185, 177) 0%, rgb(106, 64, 162) 100%);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
+      color: #BC2649;
+      background: linear-gradient(90deg,rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     @include breakpoint(small only) {
       font-size: 9rem;
@@ -59,8 +56,7 @@ header{
         transform: scale(1.1);
       }
       g{
-        // fill:semantic-color(header-content); //Changes the color of my logo inline
-        fill: red;
+        fill:semantic-color(text); //Changes the color of my logo inline //TODO
       }
       @include breakpoint(small only){
         height: 22px;
