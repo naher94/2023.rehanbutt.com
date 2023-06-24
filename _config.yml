@@ -11,7 +11,7 @@ email: me@rehanbutt.com
 year: 2023
 file-suffix: twenty-three
 description: > # this means to ignore newlines until "baseurl:"
-  As we close out 2022, let's take a look at all that has happened. I left Pittsburgh, a city I called home for the last decade, and the world of healthcare technology. I joined Hollywood and the animation industry, attended some amazing events including the World Expo and my first Wrap Party and continued to ship some awesome new software products.
+  As we close out 2022, let's take a look at all that has happened. I left Pittsburgh, a city I called home for the last decade, and the world of healthcare technology. I joined Hollywood and the animation industry, attended some amazing events including the World Expo and my first Wrap Party and continued to ship some awesome new software products. //TODO
 
 baseurl: "" # the subpath of your site, e.g. /blog
 mainurl: "https://rehanbutt.com"
