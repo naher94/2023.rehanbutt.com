@@ -16,11 +16,11 @@
   .row-pill{
     border-radius: $pill-radius;
     &.first-pill{
-      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%); //TODO semantic color
       padding: 10px;
     }
     &.second-pill{
-      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%); //TODO semantic color
       padding: 10px;
       .fake-border{
         background-color: $pure-white;
@@ -29,13 +29,13 @@
     }
     .text-pill{
       border-radius: $pill-radius;
-      background-color: rgba($pure-white, 0.75);
+      background-color: rgba($pure-white, 0.75); //TODO semantic color
       padding: 1em 3em;
     }
     .thing-container{
       border-radius: $pill-radius;
       aspect-ratio: 1/1;
-      background-color: cornflowerblue;
+      background-color: cornflowerblue; //TODO semantic color
       width: 180px;
     }
   }
