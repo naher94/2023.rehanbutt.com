@@ -1,0 +1,48 @@
+.favorite-things{
+  margin-block-start: 5em;
+  h2, h3{
+    font-family: $montserrat;
+    font-weight: $montserrat-black;
+  }
+  h2{
+    margin-bottom: 0;
+  }
+  h3{
+    font-size: 1.25em;
+    margin-bottom: -1em;
+    font-weight: $montserrat-bold;
+    letter-spacing: 0.75em;
+  }
+  .row-pill{
+    border-radius: $pill-radius;
+    &.first-pill{
+      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+      padding: 10px;
+    }
+    &.second-pill{
+      background: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+      padding: 10px;
+      .fake-border{
+        background-color: $pure-white;
+        border-radius: $pill-radius;
+      }
+    }
+    .text-pill{
+      border-radius: $pill-radius;
+      background-color: rgba($pure-white, 0.75);
+      padding: 1em 3em;
+    }
+    .thing-container{
+      border-radius: $pill-radius;
+      aspect-ratio: 1/1;
+      background-color: cornflowerblue;
+      width: 180px;
+    }
+  }
+  .text-row{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 1.25em;
+    font-weight: $lato-bold;
+  }
+}
