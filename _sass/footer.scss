@@ -1,40 +1,95 @@
 footer{
   position: relative;
   color: $pure-white;
+  background: $pure-black;
+  background-position: center;
   font-family: $zilla;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  margin-top: 5rem;
+  overflow: hidden;
+  &::before{
+    content: "";
+    position: absolute;
+    background: url(/img/sulley.png);
+    width: 130%;
+    aspect-ratio: 4/3;
+    // bottom: -110%;
+    // left: -25%;
+    bottom: -100%;
+    left: -20%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(190deg);
+    // animation: breathing-blur 10s infinite normal;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background: url(/img/mango.png);
+    width: 135%;
+    aspect-ratio: 4/3;
+    // top: -120%;
+    // right: -40%;
+    top: -119%;
+    // right: -35%;
+    right: -46%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // transform: rotate(55deg);
+    transform: rotate(41deg) scaleX(-1);
+    // animation: breathing-blur 10s ease-in-out infinite normal;
+  }
   @include breakpoint(small only){
     margin-top: 1rem;
   }
   .content-area{
-    background: $pure-black;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: $tile-radius-medium;
     @include breakpoint(small only){
       padding: 1rem;
     }
   }
   .next-year{
-    padding: 0 4rem;
-    @include breakpoint(small only){
-      padding: 0;
+    padding-left: 1rem;
+    svg{
+      height: 100%;
+      // -webkit-backdrop-filter: blur(100px);
+      // backdrop-filter: blur(100px);
+      path{
+        fill: rgba($pure-white, 1);
+      }
+    }
+    .twenty{
+      padding-right: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .scaling-middle{
+      background-color: rgba($pure-white, 1);
+      margin: 4px 0;
+      // -webkit-backdrop-filter: blur(100px);
+      // backdrop-filter: blur(100px);
     }
   }
   .title-area{
+    z-index: 2;
     margin-top: 5rem;
+    padding: 0 1em;
     @include breakpoint(small only){
       margin-top: 3rem;
       padding: 0 0.25em;
     }
-  }
-  .subtitle{
-    font-family: $big-shoulders;
-    font-weight: $big-shoulders-black;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    @include breakpoint(small only) {
-      font-size: 1rem;
+    .subtitle{
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      @include breakpoint(small only) {
+        font-size: 1rem;
+      }
     }
   }
   .logo{
@@ -51,5 +106,27 @@ footer{
         height: 22px;
       }
     }
+  }
+}
+
+@keyframes breathing-blur {
+  0% {
+    transform: scale(1) rotate(190deg);
+    -webkit-filter: blur(0px) brightness(1);
+  }
+
+  25% {
+    transform: scale(0.95) rotate(190deg);
+    -webkit-filter: blur(10px) brightness(0.75);
+  }
+
+  // 60% {
+  //   transform: scale(1) rotate(190deg);
+  //   -webkit-filter: blur(0px) brightness(1);
+  // }
+
+  100% {
+    transform: scale(1) rotate(190deg);
+    -webkit-filter: blur(0px) brightness(1);
   }
 }
