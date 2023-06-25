@@ -44,5 +44,9 @@
     margin-block-end: 1em;
     font-size: 1.25em;
     font-weight: $lato-bold;
+    p{
+      padding: 0;
+      margin: 0;
+    }
   }
 }
