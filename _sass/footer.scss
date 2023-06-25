@@ -14,8 +14,6 @@ footer{
     background: url(/img/sulley.png);
     width: 130%;
     aspect-ratio: 4/3;
-    // bottom: -110%;
-    // left: -25%;
     bottom: -100%;
     left: -20%;
     background-position: center;
@@ -31,15 +29,11 @@ footer{
     background: url(/img/mango.png);
     width: 135%;
     aspect-ratio: 4/3;
-    // top: -120%;
-    // right: -40%;
     top: -119%;
-    // right: -35%;
     right: -46%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    // transform: rotate(55deg);
     transform: rotate(41deg) scaleX(-1);
     // animation: breathing-blur 10s ease-in-out infinite normal;
   }
@@ -57,8 +51,6 @@ footer{
     padding-left: 1rem;
     svg{
       height: 100%;
-      // -webkit-backdrop-filter: blur(100px);
-      // backdrop-filter: blur(100px);
       path{
         fill: rgba($pure-white, 1);
       }
@@ -70,8 +62,6 @@ footer{
     .scaling-middle{
       background-color: rgba($pure-white, 1);
       margin: 4px 0;
-      // -webkit-backdrop-filter: blur(100px);
-      // backdrop-filter: blur(100px);
     }
   }
   .title-area{
@@ -114,17 +104,10 @@ footer{
     transform: scale(1) rotate(190deg);
     -webkit-filter: blur(0px) brightness(1);
   }
-
   25% {
     transform: scale(0.95) rotate(190deg);
     -webkit-filter: blur(10px) brightness(0.75);
   }
-
-  // 60% {
-  //   transform: scale(1) rotate(190deg);
-  //   -webkit-filter: blur(0px) brightness(1);
-  // }
-
   100% {
     transform: scale(1) rotate(190deg);
     -webkit-filter: blur(0px) brightness(1);
