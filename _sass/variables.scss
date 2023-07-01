@@ -23,6 +23,9 @@ $instagram-purple: #C13584;
 $github-purple: #6f42c1;
 $F500px-green: #34bf49;
 
+$flowstate-pink: #D12E6A;
+$flowstate-light-pink: #F6DBE6;
+
 $popcorn-yellow-1: #EFE8A5;
 $popcorn-yellow-2: #F6F0C9;
 $popcorn-yellow-3: #F4F8C7;
@@ -112,6 +115,7 @@ $semantic-colors:(
     logo-header: $pure-white,
     chat-bubble-them-bg:#E9E9EB,
     lastly-card-bg: #F7F7F7,
+    flowstate-bg: $flowstate-light-pink,
   ),
   dark:(
     page-bg: #06080C,
@@ -140,6 +144,7 @@ $semantic-colors:(
     logo-header: $pure-white,
     chat-bubble-them-bg: #262629,
     lastly-card-bg: $navy-black-d2,
+    flowstate-bg: #542135,
   ),
 );
 

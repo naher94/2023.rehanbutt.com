@@ -4,7 +4,7 @@
     position: relative;
     overflow: hidden;
     border-radius: $tile-radius-medium;
-    background-color: #F6DBE6; //TODO semantic color
+    background-color: semantic-color(flowstate-bg);
     padding-top: 3em;
     padding-bottom: 3em;
     .background-shapes{
