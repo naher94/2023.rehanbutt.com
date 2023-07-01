@@ -247,7 +247,7 @@
         transform-origin: bottom right;
         transition: $run;
         @include breakpoint(small only) {
-          z-index: 2;        
+          z-index: 2;
         }
         img{
           border-radius: $tile-radius;
