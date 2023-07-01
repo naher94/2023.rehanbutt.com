@@ -1,0 +1,54 @@
+.flowstate{
+  margin-top: 5rem;
+  .content-area{
+    position: relative;
+    overflow: hidden;
+    border-radius: $tile-radius-medium;
+    background-color: #F6DBE6; //TODO semantic color
+    padding-top: 3em;
+    padding-bottom: 3em;
+    .background-shapes{
+      position: absolute;
+      height: 150%;
+      top: -25%;
+      left: -15%;
+    }
+    .text-area{
+      z-index: 2;
+      padding-left: 3em;
+      i{
+        font-size: 2.5em;
+      }
+      h2{
+        font-family: $big-shoulders;
+        font-weight: $big-shoulders-black;
+        line-height: 1;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 2em;
+      }
+      .flowstate-link{
+        border-radius: $pill-radius;
+        background-color: #D12E6A; //TODO semantic color
+        padding: 0.5em 1em;
+        color: white;
+        font-weight: $lato-bold;
+        transition: $sprint;
+        &:hover{
+          background-color: mix($pure-black, #D12E6A, 20%); //TODO semantic color
+        }
+      }
+    }
+    .image-area{
+      padding-left: 3em;
+      position: relative;
+      img{
+        border-radius: $tile-radius 0 0 $tile-radius;
+        box-shadow: $recessed-shadow;
+      }
+    }
+  }
+}
