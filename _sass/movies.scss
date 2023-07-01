@@ -190,7 +190,6 @@
           transform: scale(0.5) rotate(-10deg);
           transition: $run;
           #popcorn-8{
-            fill: semantic-color(popcorn-1);
             position: absolute;
           }
         }
@@ -201,7 +200,6 @@
           transform: scale(0.40) rotate(5deg);
           transition: $run;
           #popcorn-9{
-            fill: semantic-color(popcorn-2);
             position: absolute;
           }
         }

@@ -26,14 +26,6 @@ $F500px-green: #34bf49;
 $flowstate-pink: #D12E6A;
 $flowstate-light-pink: #F6DBE6;
 
-$popcorn-yellow-1: #EFE8A5;
-$popcorn-yellow-2: #F6F0C9;
-$popcorn-yellow-3: #F4F8C7;
-
-$popcorn-yellow-1-dark: #cec78d;
-$popcorn-yellow-2-dark: #d7d2ab;
-$popcorn-yellow-3-dark: #d0d4a5;
-
 $signature-teal: #12abc4;
 $navy-black: #1f2937;
 //// [number indicates number of step removed from main]
@@ -91,58 +83,22 @@ $semantic-colors:(
   light:(
     page-bg: $pure-white,
     text: $navy-black,
-    text-inverted: $pure-white,
-    text-on-light-bg-always: $navy-black,
-    text-on-dark-bg-always: $pure-white,
     link: $signature-teal,
-    text-bg: $signature-teal-l6,
-    informational-pill: $navy-black,
-    actionable-pill: $signature-teal,
-    actionable-pill-hover: $signature-teal-d1,
     shadow: rgba($navy-black,0.75),
-    floating-card-bg: $pure-white,
-    footer-bg: $navy-black-l9,
-    footer-nav-hover: $navy-black-l8,
     footer-logo: $navy-black,
-    inline-code: $navy-black-l9,
-    recent-resources-bg: $signature-teal,
-    button-outline: $navy-black,
-    button-fill: $navy-black,
     selection-background: $signature-teal-l6,
-    joined-card-bg: $navy-black-l9,
-    button-primary: $signature-teal,
-    hero-card-bg: $navy-black,
     logo-header: $pure-white,
-    chat-bubble-them-bg:#E9E9EB,
     lastly-card-bg: #F7F7F7,
     flowstate-bg: $flowstate-light-pink,
   ),
   dark:(
     page-bg: #06080C,
     text: $pure-white,
-    text-inverted: $navy-black,
-    text-on-light-bg-always: $navy-black,
-    text-on-dark-bg-always: $pure-white,
     link: $signature-teal,
-    text-bg: $signature-teal-d4,
-    informational-pill: $navy-black-d6,
-    actionable-pill: $signature-teal-d1,
-    actionable-pill-hover: $signature-teal-d2,
     shadow: rgba($navy-black-d9,0.75),
-    floating-card-bg: $navy-black,
-    footer-bg: $navy-black-d2,
-    footer-nav-hover: $navy-black-d4,
     footer-logo: $pure-white,
-    inline-code: $navy-black-d8,
-    recent-resources-bg: $signature-teal-d2,
-    button-outline: $pure-white,
-    button-fill: $pure-white,
     selection-background: $signature-teal-d3,
-    joined-card-bg: $navy-black-d4,
-    button-primary: $signature-teal,
-    hero-card-bg: $navy-black-d2,
     logo-header: $pure-white,
-    chat-bubble-them-bg: #262629,
     lastly-card-bg: $navy-black-d2,
     flowstate-bg: #542135,
   ),

@@ -32,13 +32,13 @@
       }
       .flowstate-link{
         border-radius: $pill-radius;
-        background-color: #D12E6A; //TODO semantic color
+        background-color: $flowstate-pink; //TODO semantic color
         padding: 0.5em 1em;
         color: white;
         font-weight: $lato-bold;
         transition: $sprint;
         &:hover{
-          background-color: mix($pure-black, #D12E6A, 20%); //TODO semantic color
+          background-color: mix($pure-black, $flowstate-pink, 20%); //TODO semantic color
         }
       }
     }
