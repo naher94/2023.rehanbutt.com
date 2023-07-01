@@ -5,7 +5,7 @@
   }
   .content-area{
     border-radius: $tile-radius-medium;
-    background-color: $navy-black-l9; //TODO replace with sematic color
+    background-color: semantic-color(movie-card-bg);
     font-family: $big-shoulders;
     padding: 2em;
     position: relative;
@@ -25,7 +25,6 @@
         line-height: 1;
         font-size: 1.5em;
         letter-spacing: 0.5em;
-        // margin-inline-start: 1.5em; //to counter act the shift with the rotated 2023
         @include breakpoint(small only) {
           font-size: 1.5em;
           padding: 0;
@@ -58,6 +57,9 @@
       margin-block-start: -2em;
       .poster-box{
         margin-inline-end: -1.5em; //create the poster overlap effect
+        .number{
+          z-index: 2;
+        }
         &:nth-of-type(1){
           z-index: 3;
           .poster{
@@ -86,15 +88,15 @@
       .poster{
         position: relative;
         .number{
-          color: $pure-white; //TODO semantic color
+          color: semantic-color(text-inverted);
           margin-block-start: -1.5em;
           aspect-ratio: 1/1;
-          background-color: $navy-black; //TODO semantic color
+          background-color: semantic-color(movie-number-badge-bg);
           width: 3em;
           border-radius: $pill-radius;
           padding: 0.5em;
           text-align: center;
-          border: 0.2em solid $navy-black-l9; //TODO semantic color
+          border: 0.2em solid semantic-color(movie-card-bg);
         }
         p{
           padding: 0;
