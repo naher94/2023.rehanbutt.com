@@ -8,6 +8,9 @@ footer{
   padding-top: 5rem;
   margin-top: 5rem;
   overflow: hidden;
+  @media (prefers-color-scheme: dark) {
+    background-color: $navy-black-d5;
+  }
   &::before{
     content: "";
     position: absolute;
@@ -20,8 +23,9 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(190deg);
-    // animation: breathing-blur 10s infinite normal;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.8);
+    }
   }
   &::after{
     content: "";
@@ -35,7 +39,9 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(41deg) scaleX(-1);
-    // animation: breathing-blur 10s ease-in-out infinite normal;
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(0.8);
+    }
   }
   @include breakpoint(small only){
     margin-top: 1rem;
@@ -96,20 +102,5 @@ footer{
         height: 22px;
       }
     }
-  }
-}
-
-@keyframes breathing-blur {
-  0% {
-    transform: scale(1) rotate(190deg);
-    -webkit-filter: blur(0px) brightness(1);
-  }
-  25% {
-    transform: scale(0.95) rotate(190deg);
-    -webkit-filter: blur(10px) brightness(0.75);
-  }
-  100% {
-    transform: scale(1) rotate(190deg);
-    -webkit-filter: blur(0px) brightness(1);
   }
 }
