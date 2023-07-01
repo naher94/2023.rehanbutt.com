@@ -32,13 +32,13 @@
       }
       .flowstate-link{
         border-radius: $pill-radius;
-        background-color: $flowstate-pink; //TODO semantic color
+        background-color: $flowstate-pink;
         padding: 0.5em 1em;
         color: white;
         font-weight: $lato-bold;
         transition: $sprint;
         &:hover{
-          background-color: mix($pure-black, $flowstate-pink, 20%); //TODO semantic color
+          background-color: mix($pure-black, $flowstate-pink, 20%);
         }
       }
     }
@@ -47,7 +47,7 @@
       position: relative;
       img{
         border-radius: $tile-radius 0 0 $tile-radius;
-        box-shadow: $recessed-shadow;
+        box-shadow: $pure-black $recessed-shadow;
       }
     }
   }
