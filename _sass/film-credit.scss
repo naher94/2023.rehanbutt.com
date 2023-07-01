@@ -5,9 +5,12 @@
   }
   .content-area{
     border-radius: $tile-radius-medium;
-    background: linear-gradient(to bottom right, rgba(22,63,114,1) 0%, rgba(43,127,160,1) 100%); //TODO semantic color
+    background: linear-gradient(to bottom right, rgba(22,63,114,1) 0%, rgba(43,127,160,1) 100%);
     position: relative;
     padding: 2em;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(to bottom right, rgba(18, 45, 80,1) 0%, rgba(33, 91, 114,1) 100%);
+    }
     &:before{
       content: ' ';
       display: block;
@@ -31,12 +34,15 @@
       .poster{
         border-radius: $tile-radius-medium;
         overflow: hidden;
-        box-shadow: $recessed-shadow;
+        box-shadow: $pure-black $recessed-shadow;
         transform: rotate(-10deg);
         margin-block-start: -10rem;
       }
     }
     .text-container{
+      .wdas-logo{
+        filter: none;
+      }
       z-index: 3;
       font-weight: $lato-bold;
       .wdas-logo{
@@ -44,6 +50,7 @@
       }
       .text-description{
         padding: 2em;
+        color: $pure-white;
       }
     }
   }
