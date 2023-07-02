@@ -1,7 +1,7 @@
 .film-credit{
   margin-top: 14rem;
   @include breakpoint(small only) {
-    margin-top: 1rem;
+    margin-top: 12rem;
   }
   .content-area{
     border-radius: $tile-radius-medium;
@@ -31,26 +31,39 @@
     .poster-container{
       z-index: 2;
       padding: 2em;
+      @include breakpoint(small only) {
+        padding: 1em;
+      }
       .poster{
         border-radius: $tile-radius-medium;
         overflow: hidden;
         box-shadow: $pure-black $recessed-shadow;
         transform: rotate(-10deg);
         margin-block-start: -10rem;
+        @include breakpoint(small only) {
+          transform: rotate(0);
+        }
       }
     }
     .text-container{
-      .wdas-logo{
-        filter: none;
-      }
       z-index: 3;
       font-weight: $lato-bold;
+      @include breakpoint(small only) {
+        margin-block-start: 2em;
+      }
       .wdas-logo{
         max-width: 15em;
+        filter: none;
+        @include breakpoint(small only) {
+          width: 10em;
+        }
       }
       .text-description{
         padding: 2em;
         color: $pure-white;
+        @include breakpoint(small only) {
+          padding: 1em;
+        }
       }
     }
   }
