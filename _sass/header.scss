@@ -8,6 +8,9 @@ header{
   }
   .number-container{
     margin-top: -8em; //TODO
+    @include breakpoint(small only) {
+      margin-top: -4em;
+    }
     h1{
       justify-content: space-between;
       display: grid;
