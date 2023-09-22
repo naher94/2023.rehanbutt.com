@@ -1,7 +1,8 @@
 .movies{
   margin-top: 30rem;
   @include breakpoint(small only) {
-    margin-top: 1rem;
+    margin-top: 15rem;
+    font-size: 0.5em;
   }
   .content-area{
     border-radius: $tile-radius-medium;
