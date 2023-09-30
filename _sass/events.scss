@@ -183,6 +183,7 @@
         }
       }
     }
+    // TODO is this still needed
     .leadership-design, .light-box, .view-conf{
       @include breakpoint(small only){
         text-align: center;
