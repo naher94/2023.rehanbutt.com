@@ -1,36 +1,53 @@
 <section class="music grid-container" id="music">
   <div class="grid-x">
     <div class="cell music-container grid-x align-justify">
-      <div class="cell medium-6">
+      <div class="cell medium-6 align-middle grid-x">
         <h2>19,507<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
-        <h3>Top 5 most played songs</h3>
+        <!-- <h3>Top 5 most played songs</h3> -->
       </div>
-      <div class="song-container cell medium-5 grid-x align-center">
-        {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
-          {%- for song in songs_order -%}
-          {% capture song-card %}
-            <div class="album-cover-wrapper cell shrink">
-              <img src="img/{{song.album-cover}}" alt="Dance Dance Dance Album Cover" class="album-cover">
-            </div>
-            <div class="text-container cell auto grid-x">
-              <div class="cell grid-x align-middle">
-                <div class="cell auto grid-x">
-                  <p class="title cell">{{song.song-name}} 
-                    <i class="fas fa-external-link-square-alt"></i>
-                  </p>
-                  <div class="cell grid-x">
-                    <p class="artist cell auto">{{song.artist}}</p>
-                    <p class="play-count cell shrink">{{song.play-count}} plays</p>
-                  </div>
-                </div>
+      <div class="cell medium-6">
+        <div class="jukebox">
+          <div class="head">
+            <div class="empty">
+              <div class="record">
+                <img src="img/music-diner.jpg" alt="">
               </div>
             </div>
-          {% endcapture %}
-          <div class="song-tile cell small-12 grid-x">
-            {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
           </div>
-        {%- endfor -%}
-
+          <div class="body">
+            <div class="song-container cell medium-5 grid-x align-center">
+              {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
+                {%- for song in songs_order -%}
+                {% capture song-card %}
+                  <div class="album-cover-wrapper cell shrink">
+                    <div class="record">
+                      <div class="art">
+                        <img src="img/{{song.album-cover}}" alt="{{song.song-name}} Album Cover">
+                      </div>
+                    </div>
+                    <img src="img/{{song.album-cover}}" alt="{{song.song-name}} Album Cover" class="album-cover">
+                  </div>
+                  <div class="text-container cell auto grid-x">
+                    <div class="cell grid-x align-middle">
+                      <div class="cell auto grid-x">
+                        <p class="title cell">{{song.song-name}} 
+                          <i class="fas fa-external-link-square-alt"></i>
+                        </p>
+                        <div class="cell grid-x">
+                          <p class="artist cell auto">{{song.artist}}</p>
+                          <p class="play-count cell shrink">{{song.play-count}} plays</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endcapture %}
+                <div class="song-tile cell small-12 grid-x">
+                  {%- include external-link.html link=song.link content=song-card css-class="grid-x cell" -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

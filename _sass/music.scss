@@ -51,12 +51,107 @@
       padding-right: 0.5rem;
     }
   }
+  .jukebox{
+    position: relative;
+    .head{
+      aspect-ratio: 1/1;
+      background-color: #9fffb4;
+      border-radius: 50%;
+      border: 5px solid #1d1d1d;
+      animation: lighting 10s infinite;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .empty{
+        aspect-ratio: 1/1;
+        background-color: white;
+        border-radius: 50%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .record{
+          border-radius: 1000px;
+          background-color: black;
+          aspect-ratio: 1/1;
+          transition: $run;
+          overflow: hidden;
+          border: solid black 60px;
+          animation: spin 30s infinite;
+          animation-timing-function: linear;
+          width: 60%;
+        }
+      }
+    }
+    .body{
+      margin-top: -50%;
+      z-index: 2;
+      position: relative;
+      background-color: white;
+      border: 5px solid #1d1d1d;
+      border-top-width: 15px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 1.5em 4em;
+      padding-bottom: 3em;
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 10%;
+        height: 95%;
+        background-color: #9fffb4;
+        animation: lighting 10s infinite;
+        animation-fill-mode: forwards;
+      }
+      
+      &::before {
+        border-bottom-right-radius: 10px;
+        left: 0;
+      }
+      
+      &::after {
+        left: auto;
+        right: 0;
+        border-bottom-left-radius: 10px;
+      }
+    }
+  }
+
   .song-container{
     font-size: 0.8em;
+    $album-size: 6em;
     .album-cover-wrapper{
-      max-width: 7em;
+      max-width: $album-size;
+      position: relative;
       .album-cover{
         aspect-ratio: 1/1;
+        position: relative;
+        z-index: 2;
+        // transition: $run;
+      }
+      .record{
+        border-radius: 1000px;
+        background-color: black;
+        aspect-ratio: 1/1;
+        position: absolute;
+        width: $album-size - 1em;
+        top: 0.5em;
+        left: 5px;
+        z-index: 1;
+        transition: $run;
+        overflow: hidden;
+        border: solid black 1.5em;
+        animation: spin 30s infinite;
+        animation-timing-function: linear;
+      }
+    }
+    @keyframes spin {
+      to {
+        transform: rotate(2154deg);
       }
     }
     .song-tile{
@@ -69,8 +164,15 @@
       }
       a{
         &:hover{
+          .record{
+            margin-left: $album-size / 2;
+          }
+          .album-cover{
+            // margin-left: -1 * $album-size / 2;
+          }
           .text-container{
             background-color: rgba($navy-black, .1);
+            margin-left: 2em; //TODO do we want this?
             @media (prefers-color-scheme: dark) {
               background-color: rgba($navy-black-l1, 0.75);
             }
@@ -112,5 +214,26 @@
         }
       }
     }
+  }
+}
+
+@keyframes lighting {
+  0% {
+    background-color: #9fffb4
+  }
+  20% {
+    background-color: #f09fff;
+  }
+  40% {
+    background-color: #9fedff;
+  }
+  60% {
+    background-color: #f9ff9f;
+  }
+  80% {
+    background-color: #ffa89f;
+  }
+  99% {
+    background-color: #bb9fff;
   }
 }
