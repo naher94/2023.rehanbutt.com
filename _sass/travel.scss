@@ -117,6 +117,10 @@
         .number-big{
           font-size: 3em;
           font-weight: $big-shoulders-bold;
+          i{
+            font-size: 0.5em;
+            vertical-align: middle;
+          }
         }
         .text-top{
           font-size: 1.4em;
@@ -141,22 +145,23 @@
           padding-bottom: 0.25em;
         }
       }
-      .lockup-medium{
-        text-transform: uppercase;
-        padding: 1em;
-        .text-top{
-          margin-bottom: -0.5em;
-        }
-        .number-big{
-          font-size: 2em;
-          font-weight: $big-shoulders-bold;
-          text-transform: initial;
-          i{
-            font-size: 0.5em;
-            vertical-align: middle;
-          }
-        }
-      }
+      // TODO check if I still need this
+      // .lockup-medium{
+      //   text-transform: uppercase;
+      //   padding: 1em;
+      //   .text-top{
+      //     margin-bottom: -0.5em;
+      //   }
+      //   .number-big{
+      //     font-size: 2em;
+      //     font-weight: $big-shoulders-bold;
+      //     text-transform: initial;
+      //     i{
+      //       font-size: 0.5em;
+      //       vertical-align: middle;
+      //     }
+      //   }
+      // }
     }
   }
 }
