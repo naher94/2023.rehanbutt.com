@@ -59,10 +59,13 @@
     }
     .top-picks{
       margin-block-start: -2em;
+      @include breakpoint(small only) {
+        margin-block-start: -4em;
+      }
       .poster-box{
-        margin-inline-end: -1.5em; //create the poster overlap effect
+        margin-inline-end: -1.5em; //create the left to right poster overlap effect
         @include breakpoint(small only) {
-          margin-block-start: -2em;
+          margin-inline-end: -2.5em;
         }
         .number{
           z-index: 2;
@@ -97,6 +100,9 @@
       }
       .poster-container{
         margin-inline-end: 1.5em; //Adjusting for the negative margin of the poster overlaps
+        @include breakpoint(small only) {
+          margin-inline-end: 2.5em;
+        }
       }
       .poster{
         position: relative;
