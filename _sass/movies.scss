@@ -17,6 +17,9 @@
       margin-block-start: -20em;
     }
     .title-container{
+      @include breakpoint(small only) {
+        font-size: 1.5em;
+      }
       h2{
         font-family: $big-shoulders;
         font-weight: $big-shoulders-light;
@@ -27,8 +30,8 @@
         font-size: 1.5em;
         letter-spacing: 0.5em;
         @include breakpoint(small only) {
-          font-size: 1.5em;
           padding: 0;
+          font-weight: $big-shoulders-regular;
         }
       }
       .title2{
@@ -58,6 +61,9 @@
       margin-block-start: -2em;
       .poster-box{
         margin-inline-end: -1.5em; //create the poster overlap effect
+        @include breakpoint(small only) {
+          margin-block-start: -2em;
+        }
         .number{
           z-index: 2;
         }
@@ -73,6 +79,9 @@
             max-width: 12em;
             .number{
               font-size: 0.75em;
+              @include breakpoint(small only) {
+                font-size: 1em;
+              }
             }
           }
         }
@@ -80,6 +89,9 @@
           max-width: 8em;
           .number{
             font-size: 0.5em;
+            @include breakpoint(small only) {
+              font-size: 1em;
+            }
           }
         }
       }
@@ -124,6 +136,12 @@
         height: 0.1em;
       }
     }
+    .stats-container{
+      @include breakpoint(small only) {
+        font-size: 2em;
+        padding: 1em;
+      }
+    }
     .total-watched{
       font-size: 1.35em;
       position: relative;
@@ -146,6 +164,7 @@
         font-weight: $zilla-light;
         font-size: 0.75em;
         color: #4d4d4d;
+        // TODO semantic color
         i{
           font-size: 0.6em;
         }
@@ -154,26 +173,13 @@
     .busy-day{
       font-size: 1.35em;
       position: relative;
+      @include breakpoint(small only) {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+      }
       .text-container{
         position: relative;
         z-index: 2;
-        &:hover +{
-          .average{
-            .monthly{
-              top: -16%;
-              right: 28%;
-            }
-            .daily{
-              top: -2%;
-              right: -5%;
-            }
-          }
-        }
-        p{
-          &:last-of-type{
-            width: 75%;
-          }
-        }
       }
       p{
         font-family: $big-shoulders;
@@ -184,48 +190,11 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
-      }
-      .average{
-        .monthly{
-          position: absolute;
-          top: -11%;
-          right: 23%;
-          transform: scale(0.5) rotate(-10deg);
-          transition: $run;
-          #popcorn-8{
-            position: absolute;
-          }
-        }
-        .daily{
-          position: absolute;
-          top: -2%;
-          right: 0;
-          transform: scale(0.40) rotate(5deg);
-          transition: $run;
-          #popcorn-9{
-            position: absolute;
-          }
-        }
-        .popcorn-text-container{
-          z-index: 2;
-          color: $pure-black;
-          p{
-            text-shadow: none;
-          }
-          .number{
-            display: inline;
-            padding-right: 0.05em;
-          }
-          .description{
-            margin-bottom: 0.1em;
-          }
-        }
       }
     }
     .first-watch{
       font-size: 1.35em;
       position: relative;
-      margin-left: -.5em;
       .text-container{
         position: relative;
         z-index: 2;
@@ -239,21 +208,6 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
-      }
-      .poster{
-        max-width: 3em;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transform-origin: bottom right;
-        transition: $run;
-        @include breakpoint(small only) {
-          z-index: 2;
-        }
-        img{
-          border-radius: $tile-radius;
-          box-shadow: $centered-shadow rgba($pure-black, 0.5);
-        }
       }
     }
   }
