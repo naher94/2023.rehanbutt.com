@@ -167,6 +167,9 @@
       .lockup-big{
         text-transform: uppercase;
         padding: 1em;
+        @include breakpoint(small only) {
+          padding: 0.5em;
+        }
         .number-big{
           font-size: 3em;
           font-weight: $big-shoulders-bold;
