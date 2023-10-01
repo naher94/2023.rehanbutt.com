@@ -2,24 +2,41 @@
   <div class="grid-container">
     <div class="grid-x site-container">
       <div class="cell grid-x sub-section shrink title-section">
-        <h2>v7 guava</h2>
-        <h3>{%- include external-link.html link="https://rehanbutt.com" content="rehanbutt.com" css-class="" -%}</h3>
+        <h2>v7 guava {%- include external-link.html link="https://rehanbutt.com" content="rehanbutt.com" css-class="" -%}</h2>
       </div>
       <div class="cell grid-x sub-section auto main-content">
-        <div class="left cell medium-6 grid-x">
+        <div class="left cell medium-8 grid-x">
           <h4>Photography</h4>
-          <p>Published a bunch of photos from my travel onto the site. Check out some of the first sets! Keep an eye out for more sets joining the party soon.</p>
-          <a href="" class="cell grid-x align-justify">
-            <div class="cell shrink name">
-              Dubai Expo
-            </div>
-            <div class="cell shrink season">
-              Spring 2022
-            </div>
-          </a>
+          <p class="description">Published a bunch of photos from my travel onto the site. Check out some of the first sets! Keep an eye out for more sets joining the party soon.</p>
+          <div class="link-list cell grid-x">
+            {% assign photo-list = "(dubai|Dubai Expo|Spring 2022),(jordan|Jordan|Winter 2022),(assorted-snaps|Assorted Snaps|Winter 2014)" | remove: "(" | remove: ")" | split: ',' %}
+            {% for photo in photo-list %}
+            {% assign each = photo | split: '|' %}
+              <a href="https://rehanbutt.com/photography/{{each[0]}}" rel="noopener" target="_blank" class="cell grid-x align-justify detail-item">
+                <div class="cell shrink name">
+                  {{each[1]}}
+                </div>
+                <div class="cell shrink season">
+                  {{each[2]}}
+                </div>
+                <span class="visually-hidden">Opens a new window</span>
+              </a>
+            {% endfor %}
+          </div>
         </div>
-        <div class="right cell medium-6">
-          images go here
+        <div class="right cell grid-x">
+          {% assign photo-list = "(dubai|dubai.jpg|Al Wasl Plaza Dome in daylight),(jordan|jordan2022.jpg|The Treasury at Petra),(assorted-snaps|burj-al-arab.jpg|Lobby of the Burj Al Arab)" | remove: "(" | remove: ")" | split: ',' %}
+          {% for photo in photo-list %}
+          {% assign each = photo | split: '|' %}
+          <div class="cell small-4">
+            <div class="image-wrapper">
+              <a href="https://rehanbutt.com/photography/{{each[0]}}" rel="noopener" target="_blank">
+                <img src="/img/{{each[1]}}" alt="{{each[2]}}">
+                <span class="visually-hidden">Opens a new window</span>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="cell sub-section shrink by-numbers">
