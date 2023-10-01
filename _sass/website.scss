@@ -15,11 +15,17 @@
       padding: 1em;
     }
     .title-section{
-      h2, h3{
+      h2{
         font-family: $source-code;
         font-size: 1em;
         writing-mode: vertical-rl;
         rotate: 180deg;
+        @include breakpoint(small only) {
+          writing-mode: unset;
+          rotate: 0deg;
+          margin-block-end: 0;
+          width: 100%;
+        }
       }
       h2{
         text-transform: uppercase;
@@ -36,15 +42,28 @@
       margin-left: 1em;
       margin-right: 1em;
       overflow: hidden;
+      @include breakpoint(small only) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
       h4{
         font-family: $lato;
         font-weight: $lato-bold;
         font-size: 3em;
+        @include breakpoint(small only) {
+          padding-left: 0.5rem;
+        }
       }
       .description{
         //To account for the alignment shift with the negative margin on the detail items
         padding-right: 0.5em;
         line-height: 1.2;
+        @include breakpoint(small only) {
+          padding-left: 0.5rem;
+          padding-right: 0;
+        }
       }
       .link-list{
         margin-top: 1em;
@@ -60,6 +79,9 @@
           .name{
             font-weight: $lato-bold;
           }
+        }
+        @include breakpoint(small only) {
+          margin-left: 0;
         }
       }
       .right{
@@ -97,6 +119,9 @@
           transition: $run;
           &:hover{
             scale: 1.3;
+          }
+          @include breakpoint(small only) {
+            scale: 1.5;
           }
         }
       }
