@@ -30,6 +30,9 @@
         transform: rotate(15deg);
         animation: float 7s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 70px;
+        }
       }
       &__yellow{
         width: 160px;
@@ -38,6 +41,9 @@
         top: 20%;
         animation: float 10s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 50px;
+        }
       }
       &__orange{
         width: 100px;
@@ -47,6 +53,9 @@
         transform: rotate(-10deg);
         animation: float 7s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 25px;
+        }
       }
       &__red{
         width: 130px;
@@ -56,6 +65,9 @@
         transform: rotate(30deg);
         animation: float 10s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 60px;
+        }
       }
       &__blue{
         width: 80px;
@@ -65,6 +77,9 @@
         transform: rotate(-5deg);
         animation: float 10s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 40px;
+        }
       }
       &__green{
         width: 250px;
@@ -74,6 +89,9 @@
         transform: rotate(-20deg);
         animation: float 7s ease-in-out infinite paused;
         animation-play-state: running;
+        @include breakpoint(small only) {
+          width: 100px;
+        }
       }
     }
   }
