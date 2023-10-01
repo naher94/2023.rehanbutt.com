@@ -22,13 +22,13 @@
     border-radius: $tile-radius-medium;
     background-color: #FFC9A5;
     padding: 2em;
-    font-size: 1rem;
     @include breakpoint(small only) {
       padding: 1em;
     }
     p{
       margin: 0;
       padding: 0;
+      font-size: 1.2rem;
     }
     .share-area{
       margin-block-start: 2em;
