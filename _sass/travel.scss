@@ -1,19 +1,31 @@
+@mixin dark-fill($color){
+  @media (prefers-color-scheme: dark) {
+    g{
+      path{
+        fill: $color;
+      }
+    }
+  }
+}
+
 .travel{
-  // color: $pure-white;
   margin-top: 2rem;
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
   .content-area{
     border-radius: $tile-radius-medium;
-    background: #31558B; //TODO move to semantic color
+    background: #31558B;
+    @media (prefers-color-scheme: dark) {
+    background: #455E82;
+    }
     font-family: $big-shoulders;
     padding-left: 1rem;
     padding-right: 1rem;
     .page{
-      background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(200,224,255,1) 0%, rgba(255,230,211,1) 100%); //TODO move to semantic color
+      background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(200,224,255,1) 0%, rgba(255,230,211,1) 100%);
       @media (prefers-color-scheme: dark) {
-        background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(68,112,171,1) 0%, rgba(211,156,114,1) 100%);
+        background: url(../img/travel-pattern.png), #35445A;
       }
       background-blend-mode: multiply;
       border-radius: $tile-radius-medium;
@@ -53,51 +65,56 @@
       .stamp-dc{
         grid-column: 1/3;
         grid-row: 1/3;
-        img{
+        svg{
           rotate: -10deg;
           scale: 1.15;
+          @include dark-fill(#5B97FB);
         }
       }
       .stamp-chicago{
         grid-column: 2/4;
         grid-row: 3/5;
-        img{
+        svg{
           rotate: 15deg;
           scale: 1.15;
           cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🐱</text></svg>") 16 0, auto;
+          @include dark-fill(#8BEE55);
         }
       }
       .stamp-la{
         grid-column: 3/5;
         grid-row: 5/6;
-        img{
+        svg{
           rotate: -8deg;
           @include breakpoint(small only) {
             rotate: 8deg;
           }
+          @include dark-fill(#6FCEFF);
         }
       }
       .stamp-nyc{
         grid-column: 4/6;
         grid-row: 2/4;
-        img{
+        svg{
           rotate: -8deg;
+          @include dark-fill(#56D958);
         }
       }
       .stamp-pittsburgh{
         grid-column: 5/8;
         grid-row: 4/6;
-        img{
+        svg{
           rotate: 8deg;
           @include breakpoint(small only) {
             scale: 1.25;
           }
+          @include dark-fill(#FFD961);
         }
       }
       .stamp-colmar{
         grid-column: 8/11;
         grid-row: 1/2;
-        img{
+        svg{
           rotate: 12deg;
           scale: 1.15;
           @include breakpoint(small only) {
@@ -105,51 +122,56 @@
             margin-block-start: 3em;
             rotate: -18deg;
           }
+          @include dark-fill(#FF55F1);
         }
       }
       .stamp-schwangau{
         grid-column: 9/12;
         grid-row: 4/6;
-        img{
+        svg{
           rotate: -12deg;
           scale: .90;
           @include breakpoint(small only) {
             scale: 1.15;
           }
+          @include dark-fill(#AB4EFF);
         }
       }
       .stamp-montreux{
         grid-column: 11/14;
         grid-row: 2/4;
-        img{
+        svg{
           rotate: -10deg;
           scale: .90;
           @include breakpoint(small only) {
             scale: 1.15;
           }
+          @include dark-fill(#F33958);
         }
       }
       .stamp-zurich{
         grid-column: 7/9;
         grid-row: 2/4;
-        img{
+        svg{
           rotate: 8deg;
           @include breakpoint(small only) {
             scale: 1.1;
             margin-inline-start: 1em;
           }
+          @include dark-fill(#FC9D46);
         }
       }
       .stamp-doha{
         grid-column: 12/15;
         grid-row: 4/6;
-        img{
+        svg{
           rotate: 6deg;
           @include breakpoint(small only) {
             margin-block-start: 4em;
             margin-inline-start: -1em;
             scale: 1.5;
           }
+          @include dark-fill(#D93B61);
         }
       }
     }
