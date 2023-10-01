@@ -12,12 +12,20 @@
       font-family: $big-shoulders;
       font-weight: $big-shoulders-black;
       font-size: 5em;
+      @include breakpoint(small only) {
+        font-size: 10em;
+        line-height: 1.2;
+      }
     }
   }
   .card{
-    border-radius: $tile-radius-big;
+    border-radius: $tile-radius-medium;
     background-color: #FFC9A5;
     padding: 2em;
+    font-size: 1rem;
+    @include breakpoint(small only) {
+      padding: 1em;
+    }
     p{
       margin: 0;
       padding: 0;
