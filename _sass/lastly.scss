@@ -20,8 +20,12 @@
   }
   .card{
     border-radius: $tile-radius-medium;
-    background-color: #FFC9A5;
+    background-color: #AD1457; // TODO semantic color
+    // background-color: #6D1F41;
+    color: $pure-white;
     padding: 2em;
+    border: none;
+    margin-bottom: 0;
     @include breakpoint(small only) {
       padding: 1em;
     }
@@ -43,7 +47,7 @@
         max-width: 3em;
       }
       a{
-        color: semantic-color(text);
+        color: $pure-white;
         &:hover{
           .share-item{
             background-color: rgba($navy-black, 0.10);

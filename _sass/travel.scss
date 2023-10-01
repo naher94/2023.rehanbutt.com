@@ -12,6 +12,9 @@
     padding-right: 1rem;
     .page{
       background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(200,224,255,1) 0%, rgba(255,230,211,1) 100%); //TODO move to semantic color
+      @media (prefers-color-scheme: dark) {
+        background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(68,112,171,1) 0%, rgba(211,156,114,1) 100%);
+      }
       background-blend-mode: multiply;
       border-radius: $tile-radius-medium;
       padding: 1rem;
