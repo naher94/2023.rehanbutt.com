@@ -277,4 +277,71 @@
       }
     }
   }
+  .title-wrapper{
+    position: relative;
+  }
+  .musicnotes {
+    /*   display: block; */
+    /*   margin: auto; */
+      position: absolute;
+      // width: 50%;
+      width: 100%;
+      // min-width: 300px;
+      // height: 200px;
+      height: 100%;
+      border: 0px solid #000;
+    }
+    
+    .note-1,
+    .note-2,
+    .note-3,
+    .note-4 {
+      position: absolute;
+      animation: notes 4s infinite linear;
+      font-size: 2em;
+      opacity: 0;
+    }
+    
+    .note-1 {
+      top: 60%;
+      left: 0;
+      animation-delay: 0.5s;
+    }
+    
+    .note-2 {
+      top: 30%;
+      left: 30%;
+      animation-delay: 1s;
+    }
+    
+    .note-3 {
+      top: 70%;
+      left: 60%;
+      animation-delay: 1.5s;
+    }
+    
+    .note-4 {
+      top: 40%;
+      left: 90%;
+      animation-delay: 2s;
+    }
+    
+    @keyframes notes {
+      0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5) translate(50%, -50%);
+      }
+      80% {
+        opacity: 0;
+        transform: scale(1.5) translate(100%, -100%);
+      }
+      100% {
+        transform: scale(1.5) translate(100%, -100%);
+        opacity: 0;
+      }
+    }
 }
