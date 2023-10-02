@@ -135,6 +135,11 @@
           animation: spin 30s infinite;
           animation-timing-function: linear;
           width: 60%;
+          @media (prefers-color-scheme: dark) {
+            @include lighting-glow-shadow(record, 0, 0, 50px, -20px); 
+            animation: record-lighting-glow-shadow 10s infinite, spin 30s infinite;
+            animation-timing-function: linear;
+          }
         }
       }
     }
