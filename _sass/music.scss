@@ -109,9 +109,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      // @media (prefers-color-scheme: dark) {
-      //   box-shadow: 0 0 90px -10px white; //TODO animate to match lights
-      // }
       @media (prefers-color-scheme: dark) {
         @include lighting-glow-shadow(head, 0, 0, 90px, -10px); 
         animation: head-lighting-glow-shadow 10s infinite;
@@ -138,7 +135,6 @@
           @media (prefers-color-scheme: dark) {
             @include lighting-glow-shadow(record, 0, 0, 50px, -20px); 
             animation: record-lighting-glow-shadow 10s infinite, spin 30s infinite;
-            animation-timing-function: linear;
           }
         }
       }
@@ -197,7 +193,6 @@
         aspect-ratio: 1/1;
         position: relative;
         z-index: 2;
-        // transition: $run;
       }
       .record{
         border-radius: 1000px;
@@ -232,9 +227,10 @@
         &:hover{
           .record{
             margin-left: $album-size / 2;
-          }
-          .album-cover{
-            // margin-left: -1 * $album-size / 2;
+            @media (prefers-color-scheme: dark) {
+              @include lighting-glow-shadow(record-s, 0, 0, 20px, -10px); 
+              animation: record-s-lighting-glow-shadow 10s infinite, spin 30s infinite;
+            }
           }
           .text-container{
             background-color: rgba($navy-black, 0.1);
