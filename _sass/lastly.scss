@@ -20,9 +20,7 @@
   }
   .card{
     border-radius: $tile-radius-medium;
-    background-color: #AD1457; // TODO semantic color
-    // background-color: #6D1F41;
-
+    background-color: #AD1457;
     @media (prefers-color-scheme: dark) {
       background-color: #880E4F;
     }
@@ -57,7 +55,7 @@
           .share-item{
             background-color: rgba($navy-black, 0.10);
             @media (prefers-color-scheme: dark) {
-              background-color: rgba($navy-black-l1, 0.75);
+              background-color: rgba($navy-black, 0.20);
             }
           }
         }
