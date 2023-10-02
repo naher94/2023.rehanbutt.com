@@ -94,6 +94,8 @@ $semantic-colors:(
     movie-card-bg: $navy-black-l9,
     movie-number-badge-bg: $navy-black, 
     flowstate-bg: $flowstate-light-pink,
+    jukebox-bg: $pure-white,
+    jukebox-border: $navy-black-d4,
   ),
   dark:(
     page-bg: $navy-black-d3,
@@ -108,6 +110,8 @@ $semantic-colors:(
     movie-card-bg: $navy-black,
     movie-number-badge-bg: $pure-white,
     flowstate-bg: #542135,
+    jukebox-bg: $navy-black,
+    jukebox-border: $navy-black-l2,
   ),
 );
 

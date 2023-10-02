@@ -1,17 +1,63 @@
+
+@keyframes lighting {
+  0% {
+    background-color: #9fffb4;
+  }
+  20% {
+    background-color: #f09fff;
+  }
+  40% {
+    background-color: #9fedff;
+  }
+  60% {
+    background-color: #f9ff9f;
+  }
+  80% {
+    background-color: #ffa89f;
+  }
+  99% {
+    background-color: #bb9fff;
+  }
+}
+@mixin lighting-glow-shadow($name, $hl, $vl, $blur, $spread){
+  @keyframes #{$name}-lighting-glow-shadow {
+    0% {
+      box-shadow: $hl $vl $blur $spread #9fffb4;
+      background-color: #9fffb4;
+    }
+    20% {
+      box-shadow: $hl $vl $blur $spread #f09fff;
+      background-color: #f09fff;
+    }
+    40% {
+      box-shadow: $hl $vl $blur $spread #9fedff;
+      background-color: #9fedff;
+    }
+    60% {
+      box-shadow: $hl $vl $blur $spread #f9ff9f;
+      background-color: #f9ff9f;
+    }
+    80% {
+      box-shadow: $hl $vl $blur $spread #ffa89f;
+      background-color: #ffa89f;
+    }
+    99% {
+      box-shadow: $hl $vl $blur $spread #bb9fff;
+      background-color: #bb9fff;
+    }
+  }
+}
+
 .music{
   margin-top: 2rem;
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
   .music-container{
-    background-color: rgba($navy-black, .1);
     border-radius: $tile-radius-medium;
     padding: 2rem;
     @include breakpoint(small only) {
       padding: 1rem;
-    }
-    @media (prefers-color-scheme: dark) {
-      background-color: $navy-black;
     }
   }
   h2{
@@ -55,17 +101,24 @@
     position: relative;
     .head{
       aspect-ratio: 1/1;
-      background-color: #9fffb4;
+      background-color: #9fffb4; //Matches the 1st color in the animation
       border-radius: 50%;
-      border: 5px solid #1d1d1d;
+      border: 5px solid semantic-color(jukebox-border);
       animation: lighting 10s infinite;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      // @media (prefers-color-scheme: dark) {
+      //   box-shadow: 0 0 90px -10px white; //TODO animate to match lights
+      // }
+      @media (prefers-color-scheme: dark) {
+        @include lighting-glow-shadow(head, 0, 0, 90px, -10px); 
+        animation: head-lighting-glow-shadow 10s infinite;
+      }
       .empty{
         aspect-ratio: 1/1;
-        background-color: white;
+        background-color: semantic-color(jukebox-bg);
         border-radius: 50%;
         width: 80%;
         margin: auto;
@@ -89,8 +142,8 @@
       margin-top: -50%;
       z-index: 2;
       position: relative;
-      background-color: white;
-      border: 5px solid #1d1d1d;
+      background-color: semantic-color(jukebox-bg);
+      border: 5px solid semantic-color(jukebox-border);
       border-top-width: 15px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -111,12 +164,20 @@
       &::before {
         border-bottom-right-radius: 10px;
         left: 0;
+        @media (prefers-color-scheme: dark) {
+          @include lighting-glow-shadow(before, -20px, 20px, 90px, -10px); 
+          animation: before-lighting-glow-shadow 10s infinite;
+        }
       }
       
       &::after {
         left: auto;
         right: 0;
         border-bottom-left-radius: 10px;
+        @media (prefers-color-scheme: dark) {
+          @include lighting-glow-shadow(after, 20px, 20px, 90px, -10px); 
+          animation: after-lighting-glow-shadow 10s infinite;
+        }
       }
     }
   }
@@ -171,10 +232,10 @@
             // margin-left: -1 * $album-size / 2;
           }
           .text-container{
-            background-color: rgba($navy-black, .1);
+            background-color: rgba($navy-black, 0.1);
             margin-left: 2em; //TODO do we want this?
             @media (prefers-color-scheme: dark) {
-              background-color: rgba($navy-black-l1, 0.75);
+              background-color: rgba($navy-black-l1, 0.5);
             }
           }
         }
@@ -214,26 +275,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes lighting {
-  0% {
-    background-color: #9fffb4
-  }
-  20% {
-    background-color: #f09fff;
-  }
-  40% {
-    background-color: #9fedff;
-  }
-  60% {
-    background-color: #f9ff9f;
-  }
-  80% {
-    background-color: #ffa89f;
-  }
-  99% {
-    background-color: #bb9fff;
   }
 }
