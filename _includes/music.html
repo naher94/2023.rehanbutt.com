@@ -3,7 +3,6 @@
     <div class="cell music-container grid-x align-justify">
       <div class="cell medium-6 align-middle grid-x title-wrapper">
         <h2>19,507<span class="hrs">mins</span> <span class="description">of music listened to</span></h2>
-        <!-- <h3>Top 5 most played songs</h3> -->
         <div class="musicnotes">
           <div class="note-1">
             &#9835; &#9833;
@@ -15,7 +14,7 @@
             &#9839; &#9834;
           </div>
           <div class="note-4">
-            &#9834;
+            ♬
           </div>
         </div>
       </div>
@@ -30,6 +29,7 @@
           </div>
           <div class="body">
             <div class="song-container cell medium-5 grid-x align-center">
+              <h3>Top 5 most played songs</h3>
               {% assign songs_order = site.songs | sort: 'play-count' | reverse %}
                 {%- for song in songs_order -%}
                 {% capture song-card %}

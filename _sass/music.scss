@@ -85,7 +85,6 @@
   h3{
     font-family: $montserrat;
     font-weight: $montserrat-bold;
-    margin-top: 1em;
     margin-bottom: 1em;
     font-size: 1.5em;
     line-height: 1;
@@ -297,7 +296,7 @@
     .note-3,
     .note-4 {
       position: absolute;
-      animation: notes 4s infinite linear;
+      animation: notes 3s infinite linear;
       font-size: 2em;
       opacity: 0;
     }
@@ -333,14 +332,14 @@
       }
       50% {
         opacity: 1;
-        transform: scale(1.5) translate(50%, -50%);
+        transform: scale(1.5) translate(-50%, -50%);
       }
       80% {
         opacity: 0;
-        transform: scale(1.5) translate(100%, -100%);
+        transform: scale(1.5) translate(-100%, -100%);
       }
       100% {
-        transform: scale(1.5) translate(100%, -100%);
+        transform: scale(1.5) translate(-100%, -100%);
         opacity: 0;
       }
     }
