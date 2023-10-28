@@ -183,6 +183,9 @@
         margin-block-start: 1em;
         margin-block-end: 1em;
       }
+      @include breakpoint(medium){
+        justify-content: center;
+      }
       .text-container{
         position: relative;
         z-index: 2;
