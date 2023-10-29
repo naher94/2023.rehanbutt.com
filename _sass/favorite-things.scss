@@ -17,40 +17,99 @@ $things-gradient-dark: linear-gradient(90deg, rgb(184, 136, 34) 0%, rgb(26, 139,
   }
   .row-pill{
     border-radius: $pill-radius;
-    &.first-pill{
-      background: $things-gradient;
-      padding: 10px;
-      @media (prefers-color-scheme: dark) {
-        background: $things-gradient-dark;
+
+    @include breakpoint(medium) {
+      &.first-pill{
+        background: $things-gradient;
+        padding: 10px;
+        @media (prefers-color-scheme: dark) {
+          background: $things-gradient-dark;
+        }
       }
     }
-    &.second-pill{
-      background: $things-gradient;
-      padding: 10px;
-      @media (prefers-color-scheme: dark) {
-        background: $things-gradient-dark;
+    @include breakpoint(small only) {
+      &.first-pill{
+        .child-pill{
+          background: $things-gradient;
+          padding: 5px;
+          border-radius: $pill-radius;
+          &:first-of-type{
+            margin-bottom: 5px;
+          }
+        }
       }
+    }
+
+    @include breakpoint(small only){
+      h2{
+        padding: 0;
+      }
+      h3{
+        padding-inline-start: 0.15em;
+      }
+    }
+    
+    &.second-pill{
       .fake-border{
         background-color: semantic-color(page-bg);
         border-radius: $pill-radius;
+      }
+    }
+
+    @include breakpoint(medium) { //TODO should this be medium or large??
+      &.second-pill{
+        background: $things-gradient;
+        padding: 10px;
+        @media (prefers-color-scheme: dark) {
+          background: $things-gradient-dark;
+        }
+      }
+    }
+    @include breakpoint(small only) {
+      &.second-pill{
+        .child-pill{
+          background: $things-gradient;
+          padding: 5px;
+          border-radius: $pill-radius;
+          &:first-of-type{
+            margin-bottom: 5px;
+          }
+        }
         .text-pill{
-          background-color: transparent;
+          text-align: right;
+          background-color: $pure-white;
+        }
+      }
+    }
+    &.second-pill{
+      .child-pill{
+        .text-pill{
+          background-color: semantic-color(page-bg);
+        }
+      }
+    }
+    &.first-pill{
+      .child-pill{
+        .text-pill{
+          background-color: rgba($pure-white, 0.75);
+          @media (prefers-color-scheme: dark) {
+            background-color: rgba($pure-black, 0.5);
+          }
         }
       }
     }
     .text-pill{
       border-radius: $pill-radius;
-      background-color: rgba($pure-white, 0.75);
-      @media (prefers-color-scheme: dark) {
-        background-color: rgba($pure-black, 0.5);
-      }
       padding: 1em 3em;
     }
     .thing-container{
       border-radius: $pill-radius;
       aspect-ratio: 1/1;
       background-color: cornflowerblue; //TODO semantic color
-      width: 180px;
+      overflow: hidden;
+      @include breakpoint(medium){
+        width: 180px; //TODO this is hacky
+      }
     }
   }
   .text-row{
