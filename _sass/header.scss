@@ -1,8 +1,8 @@
 header{
-  border-radius: $tile-radius-medium;
   padding: 3rem;
   font-family: $big-shoulders;
   font-weight: $big-shoulders-black;
+  overflow: hidden;
   @include breakpoint(small only) {
     padding: 1rem;
   }
