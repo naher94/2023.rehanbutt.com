@@ -169,8 +169,7 @@
         font-family: $zilla;
         font-weight: $zilla-light;
         font-size: 0.75em;
-        color: #4d4d4d;
-        // TODO semantic color
+        color: semantic-color(movie-sub-description);
         i{
           font-size: 0.6em;
         }

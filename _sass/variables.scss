@@ -96,6 +96,7 @@ $semantic-colors:(
     flowstate-bg: $flowstate-light-pink,
     jukebox-bg: $pure-white,
     jukebox-border: $navy-black-d4,
+    movie-sub-description: $navy-black-l2,
   ),
   dark:(
     page-bg: $navy-black-d3,
@@ -112,6 +113,7 @@ $semantic-colors:(
     flowstate-bg: #542135,
     jukebox-bg: $navy-black,
     jukebox-border: $navy-black-l2,
+    movie-sub-description: rgba($pure-white,0.5),
   ),
 );
 
