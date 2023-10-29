@@ -1,5 +1,7 @@
 $things-gradient: linear-gradient(90deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
 $things-gradient-dark: linear-gradient(90deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
+$things-gradient-flip: linear-gradient(270deg, rgba(253,187,45,1) 0%, rgba(34,193,195,1) 100%);
+$things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26, 139, 141) 100%);
 .favorite-things{
   margin-block-start: 5em;
   h2, h3{
@@ -58,17 +60,17 @@ $things-gradient-dark: linear-gradient(90deg, rgb(184, 136, 34) 0%, rgb(26, 139,
 
     @include breakpoint(medium) { //TODO should this be medium or large??
       &.second-pill{
-        background: $things-gradient;
+        background: $things-gradient-flip;
         padding: 10px;
         @media (prefers-color-scheme: dark) {
-          background: $things-gradient-dark;
+          background: $things-gradient-dark-flip;
         }
       }
     }
     @include breakpoint(small only) {
       &.second-pill{
         .child-pill{
-          background: $things-gradient;
+          background: $things-gradient-flip;
           padding: 5px;
           border-radius: $pill-radius;
           &:first-of-type{
