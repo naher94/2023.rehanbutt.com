@@ -1,29 +1,37 @@
 .hero{
-  margin-top: 2rem;
+  // margin-top: 2rem;
+  margin-bottom: 5rem;
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
   .content-area{
-    border-radius: $tile-radius-medium;
-    padding: 3rem;
+    // border-radius: $tile-radius-medium;
+    // padding: 3rem;
     @include breakpoint(small only) {
-      padding: 1rem;
+      // padding: 1rem;
     }
-    background: radial-gradient(circle at bottom left, #DAF5FF 0%, #F7F0FF 100%);
+    // background: radial-gradient(circle at bottom left, #DAF5FF 0%, #F7F0FF 100%);
     @media (prefers-color-scheme: dark) {
-      background: radial-gradient(circle at top left, rgb(25, 53, 51) 0%, rgb(43, 28, 60) 100%);
+      // background: radial-gradient(circle at top left, rgb(25, 53, 51) 0%, rgb(43, 28, 60) 100%);
     }
   }
   .hero-text{
-    font-family: $lato;
+    font-family: $montserrat;
+    font-weight: $montserrat-bold;
     padding-left: 0;
     padding-right: 0;
     margin: 0;
     color: semantic-color(text);
+    color: $navy-black-l4;
+    color: #6E7D93;
+    font-size: 1.25em;
+    line-height: 1.5;
   }
   .emoji-section{
+    padding: .25em 0;
+    margin-right: 2em;
     span:not(:last-of-type){
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
     }
   }
 }

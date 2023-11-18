@@ -1,16 +1,17 @@
 <section class="hero" id="intro">
   <div class="grid-container">
-    <div class="grid-x content-area align-justify">
-      <div class="cell small-10 medium-8">
-        <p class="hero-text">
-          {{site.description}}
-        </p>
-      </div>
-      <div class="cell shrink grid-y emoji-section">
+    <div class="grid-x content-area">
+      <div class="cell shrink grid-y emoji-section align-justify">
         <span>🌉</span>
         <span>🩺</span>
         <span>🎞️</span>
         <span>🗺️</span>
+      </div>
+      <div class="cell auto">
+        <p class="hero-text">
+          {{site.description}}
+          {%- comment -%}might have to copy from config to get the highlight working{%- endcomment -%}
+        </p>
       </div>
     </div>
   </div>
