@@ -165,15 +165,6 @@
         font-weight: $big-shoulders-black;
         font-size: 2em;
       }
-      .sub-description{
-        font-family: $zilla;
-        font-weight: $zilla-light;
-        font-size: 0.75em;
-        color: semantic-color(movie-sub-description);
-        i{
-          font-size: 0.6em;
-        }
-      }
     }
     .busy-day{
       font-size: 1.35em;
@@ -216,6 +207,17 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
+      }
+    }
+    .stats-container{
+      .sub-description{
+        font-family: $zilla;
+        font-weight: $zilla-light;
+        font-size: 0.75em;
+        color: semantic-color(movie-sub-description);
+        i{
+          font-size: 0.6em;
+        }
       }
     }
   }
