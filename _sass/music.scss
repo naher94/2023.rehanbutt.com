@@ -131,6 +131,10 @@
           animation: spin 30s infinite;
           animation-timing-function: linear;
           width: 60%;
+          @include breakpoint(small only) {
+            border: solid black 40px;
+            width: 70%;
+          }
           @media (prefers-color-scheme: dark) {
             @include lighting-glow-shadow(record, 0, 0, 50px, -20px); 
             animation: record-lighting-glow-shadow 10s infinite, spin 30s infinite;
@@ -149,6 +153,9 @@
       border-bottom-right-radius: 10px;
       padding: 1.5em 4em;
       padding-bottom: 3em;
+      @include breakpoint(small only) {
+        padding: 1.5em 3em;
+      }
       &::after,
       &::before {
         content: '';
@@ -207,6 +214,7 @@
         border: solid black 1.5em;
         animation: spin 30s infinite;
         animation-timing-function: linear;
+        
       }
     }
     @keyframes spin {
