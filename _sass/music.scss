@@ -92,8 +92,6 @@
       text-align: left;
       margin-top: 0.5em;
       margin-bottom: 1.5em;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
     }
   }
   .jukebox{
@@ -121,6 +119,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include breakpoint(small only) {
+          width: 90%;
+        }
         .record{
           border-radius: 1000px;
           background-color: black;
@@ -154,7 +155,7 @@
       padding: 1.5em 4em;
       padding-bottom: 3em;
       @include breakpoint(small only) {
-        padding: 1.5em 3em;
+        padding: 1em 2em;
       }
       &::after,
       &::before {
@@ -166,6 +167,9 @@
         background-color: #9fffb4;
         animation: lighting 10s infinite;
         animation-fill-mode: forwards;
+        @include breakpoint(small only) {
+          width: 5%;
+        }
       }
       
       &::before {
