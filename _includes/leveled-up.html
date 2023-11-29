@@ -1,14 +1,21 @@
-{% assign skills-list = "Design Ops,Product Management,Systems Design,Mentoring,Process Design,Remote Research,Team Manangement,UX Writing,Data Analysis,Motion Design,Prototyping,Movie Making,Project Management,Teaching,Content Strategy, Discovery Research, Product Development" | split: ',' %}
+{% assign skills-list = "Design Ops,Product Management,Systems Design,Mentoring,Process Design,Remote Research,Team Manangement,UX Writing,Data Analysis, Discovery Research, Product Development" | split: ',' %}
 
 <section class="leveled-up grid-container" id="skills">
-  <div class="grid-x cell skills-card">
-    <div class="pill-container cell grid-x align-justify">
-      {%- for skill in skills-list -%}
-        <div class="pill">{{skill}}</div>
-      {%- endfor -%}
+  <div class="grid-x cell bundle-container">
+    <div class="balloon-container cell grid-x align-center">
+      <!-- balloons go here -->
+      <!-- css-class="balloonzz" -->
+      {%- comment -%}
+      {%- include balloon.html number="1" skill="Product Management" -%}
+      {%- include balloon.html number="2" skill="Systems Design" -%}
+      {%- endcomment -%}
+      <!-- Do I just export the SVG wholesale??? -->
+      <!-- <img src="/img/balloon-bundle.svg" alt=""> -->
+      {%- include balloon-bundle.svg -%}
+      <!-- TODO Clean up this file & Update the skills in the bubbles-->
     </div>
     <div class="cell grid-x align-center text-container">
-      <div class="cell">
+      <div class="cell shrink">
         <h2><span>leveled</span>up</h2>
       </div>
   </div>

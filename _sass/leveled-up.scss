@@ -1,37 +1,68 @@
 .leveled-up{
   overflow: hidden;
   margin-top: 2rem;
+  padding: 2em;
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
-  .skills-card{
-    border-radius: $tile-radius-medium;
-    position: relative;
-    overflow: hidden;
-    padding: 2em 2em 0 2em;
-    box-shadow: inset 0px 0px 0px 5px rgba($pure-black, 0.1);
-    @include breakpoint(small only) {
-      padding: 1em 1em 0 1em;
+  @keyframes bob{
+    0% {
+      transform: rotate(2deg) translateY(0);
+    }
+    50% {
+      transform: rotate(-2deg) translateY(-20px);
+    }
+    100% {
+      transform: rotate(2deg) translateY(0);
     }
   }
-  .pill-container{
+  .bundle-container{
+    transform-origin: top center;
+    animation: bob 7s ease-in-out infinite paused;
+    animation-play-state: running;
+  }
+  @mixin balloon-color($color){
+    background: $color;
+    svg{
+      path{
+        fill: $color;
+      }
+    }
+  }
+  .balloon-container{
     text-align: center;
     margin-bottom: 2em;
-    @include breakpoint(small only) {
-      justify-content: unset;
-      margin-bottom: 2em;
+    .balloon{
+      $balloon-color: $pure-black;
+      aspect-ratio: 1/1;
+      background: $balloon-color;
+      border-radius: $pill-radius;
+      width: 10rem;
+      color: white;
+      font-size: 1em;
+      position: relative;
+      text-align: center;
+      padding: 1em;
+      line-height: 1.2;
+      svg{
+        position: absolute;
+        bottom: -0.6em;
+        path{
+          fill: $balloon-color;
+        }
+      }
+      &__1{
+        rotate: -10deg;
+        @include balloon-color(red);
+        // #AAADFF
+      }
     }
     .pill{
       font-size: 1em;
       color: $navy-black;
-      background-color: rgba($pure-white, 0.5);
+      background-color: rgba($navy-black, 0.5);
       border-radius: $pill-radius;
       font-weight: $lato-bold;
-      display: inline-block;
-      padding: 0.2em 0.8em;
-      margin: 0.3em 0.25em;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
       @include breakpoint(small only) {
         font-size: 0.8em;
       }
@@ -43,7 +74,6 @@
   }
   .text-container{
     text-align: center;
-    margin-top: 1em;
     h2{
       font-family: $big-shoulders;
       font-weight: $big-shoulders-black;
