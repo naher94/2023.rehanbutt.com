@@ -30,7 +30,7 @@
     border: none;
     margin-bottom: 0;
     @include breakpoint(small only) {
-      padding: 1em;
+      padding: 3em;
     }
     p{
       margin: 0;
@@ -45,9 +45,17 @@
           font-weight: $lato-black;
         }
       }
+      .icon-wrapper{
+        @include breakpoint(small only) {
+          margin-top: 2em;
+        }
+      }
       .link-wrapper{
         aspect-ratio: 1/1;
         max-width: 3em;
+        @include breakpoint(small only) {
+          max-width: 8em;
+        }
       }
       a{
         color: $pure-white;
@@ -71,6 +79,12 @@
           justify-content: center;
           i{
             font-size: 1.3em;
+          }
+          @include breakpoint(small only) {
+            max-width: 8em;
+            i{
+              font-size: 4em;
+            }
           }
         }
       }
