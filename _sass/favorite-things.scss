@@ -113,12 +113,16 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
       }
     }
     .thing-wrapper1{
-      .thing-link{
+      .thing-container{
         &:nth-of-type(1){
-          @include thing-color-hover(yellow); //TODO update + darkmode
+          .thing-link{
+            @include thing-color-hover(yellow); //TODO update + darkmode
+          }
         }
         &:nth-of-type(2){
-          @include thing-color-hover(orange); //TODO update + darkmode
+          .thing-link{
+            @include thing-color-hover(orange); //TODO update + darkmode
+          }
         }
       }
     }
@@ -138,7 +142,7 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
     .thing-container{
       border-radius: $pill-radius;
       aspect-ratio: 1/1;
-      background-color: cornflowerblue; //TODO semantic color
+      // background-color: cornflowerblue; //TODO semantic color
       overflow: hidden;
       transition: $sprint;
       @include breakpoint(medium){
