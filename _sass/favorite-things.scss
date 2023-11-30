@@ -115,23 +115,23 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
     .thing-wrapper1{
       .thing-link{
         &:nth-of-type(1){
-          @include thing-color-hover(yellow);
+          @include thing-color-hover(yellow); //TODO update + darkmode
         }
         &:nth-of-type(2){
-          @include thing-color-hover($navy-black);
+          @include thing-color-hover(orange); //TODO update + darkmode
         }
       }
     }
     .thing-wrapper2{
       .thing-link{
         &:nth-of-type(1){
-          @include thing-color-hover(greenyellow);
+          @include thing-color-hover(greenyellow); //TODO update + darkmode
         }
         &:nth-of-type(2){
-          @include thing-color-hover($navy-black);
+          @include thing-color-hover($navy-black); //TODO update + darkmode
         }
         &:nth-of-type(3){
-          @include thing-color-hover(pink);
+          @include thing-color-hover(pink); //TODO update + darkmode
         }
       }
     }
