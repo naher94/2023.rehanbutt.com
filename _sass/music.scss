@@ -49,9 +49,9 @@
 }
 
 .music{
-  margin-top: 2rem;
+  margin-top: 4rem;
   @include breakpoint(small only) {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .music-container{
     border-radius: $tile-radius-medium;
