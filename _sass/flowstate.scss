@@ -1,5 +1,8 @@
 .flowstate{
   margin-top: 5rem;
+  @include breakpoint(small only) {
+    margin-top: 0;
+  }
   .content-area{
     position: relative;
     overflow: hidden;
