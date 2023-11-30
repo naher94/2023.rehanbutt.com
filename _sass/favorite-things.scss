@@ -104,11 +104,43 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
       border-radius: $pill-radius;
       padding: 1em 3em;
     }
+    @mixin thing-color-hover($color){
+      .thing-container{
+        background-color: $color;
+        &:hover{
+          background-color: darken($color, 20%);
+        }
+      }
+    }
+    .thing-wrapper1{
+      .thing-link{
+        &:nth-of-type(1){
+          @include thing-color-hover(yellow);
+        }
+        &:nth-of-type(2){
+          @include thing-color-hover($navy-black);
+        }
+      }
+    }
+    .thing-wrapper2{
+      .thing-link{
+        &:nth-of-type(1){
+          @include thing-color-hover(greenyellow);
+        }
+        &:nth-of-type(2){
+          @include thing-color-hover($navy-black);
+        }
+        &:nth-of-type(3){
+          @include thing-color-hover(pink);
+        }
+      }
+    }
     .thing-container{
       border-radius: $pill-radius;
       aspect-ratio: 1/1;
       background-color: cornflowerblue; //TODO semantic color
       overflow: hidden;
+      transition: $sprint;
       @include breakpoint(medium){
         width: 180px; //TODO this is hacky
       }
