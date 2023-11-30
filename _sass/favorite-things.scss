@@ -116,12 +116,12 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
       .thing-container{
         &:nth-of-type(1){
           .thing-link{
-            @include thing-color-hover(yellow); //TODO update + darkmode
+            @include thing-color-hover(#FAF8DF); //TODO update + darkmode
           }
         }
         &:nth-of-type(2){
           .thing-link{
-            @include thing-color-hover(orange); //TODO update + darkmode
+            @include thing-color-hover(#DBF8F5); //TODO update + darkmode
           }
         }
       }
@@ -129,20 +129,19 @@ $things-gradient-dark-flip: linear-gradient(270deg, rgb(184, 136, 34) 0%, rgb(26
     .thing-wrapper2{
       .thing-link{
         &:nth-of-type(1){
-          @include thing-color-hover(greenyellow); //TODO update + darkmode
+          @include thing-color-hover(#F5E6FF); //TODO update + darkmode
         }
         &:nth-of-type(2){
-          @include thing-color-hover($navy-black); //TODO update + darkmode
+          @include thing-color-hover(#FADFDF); //TODO update + darkmode
         }
         &:nth-of-type(3){
-          @include thing-color-hover(pink); //TODO update + darkmode
+          @include thing-color-hover(#ECFADF); //TODO update + darkmode
         }
       }
     }
     .thing-container{
       border-radius: $pill-radius;
       aspect-ratio: 1/1;
-      // background-color: cornflowerblue; //TODO semantic color
       overflow: hidden;
       transition: $sprint;
       @include breakpoint(medium){
