@@ -21,6 +21,19 @@
     animation: bob 7s ease-in-out infinite paused;
     animation-play-state: running;
   }
+  .text-container{
+    p{
+      text-align: left;
+      font-size: 1.5em;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      font-weight: $lato-bold;
+      @include breakpoint(small only) {
+        font-size: 1.25em;
+      }
+    }
+  }
   @mixin balloon-color($color){
     background: $color;
     svg{
