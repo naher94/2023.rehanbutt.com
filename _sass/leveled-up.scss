@@ -37,7 +37,7 @@
     }
     .cloud-container{
       .slide-track{
-        animation: scroll2 40s linear infinite;
+        animation: scroll2 50s linear infinite;
         width: 800px;
       }
       .slide{
@@ -106,6 +106,16 @@
     animation: bob 7s ease-in-out infinite paused;
     animation-play-state: running;
     z-index: 3;
+    // TODO dark mode color the balloons
+    @media (prefers-color-scheme: dark) {
+      svg[class="balloon-bundle"]{
+        g{
+          path[stroke="#1F2937"]{
+            stroke: #FFFFFF;
+          }
+        }
+      }
+    }
   }
   .text-container{
     p{
@@ -120,60 +130,10 @@
       }
     }
   }
-  @mixin balloon-color($color){
-    background: $color;
-    svg{
-      path{
-        fill: $color;
-      }
-    }
-  }
-  .balloon-container{
-    text-align: center;
-    margin-bottom: 2em;
-    .balloon{
-      $balloon-color: $pure-black;
-      aspect-ratio: 1/1;
-      background: $balloon-color;
-      border-radius: $pill-radius;
-      width: 10rem;
-      color: white;
-      font-size: 1em;
-      position: relative;
-      text-align: center;
-      padding: 1em;
-      line-height: 1.2;
-      svg{
-        position: absolute;
-        bottom: -0.6em;
-        path{
-          fill: $balloon-color;
-        }
-      }
-      &__1{
-        rotate: -10deg;
-        @include balloon-color(red);
-        // #AAADFF
-      }
-    }
-    .pill{
-      font-size: 1em;
-      color: $navy-black;
-      background-color: rgba($navy-black, 0.5);
-      border-radius: $pill-radius;
-      font-weight: $lato-bold;
-      @include breakpoint(small only) {
-        font-size: 0.8em;
-      }
-      @media (prefers-color-scheme: dark) {
-        color: $pure-white;
-        background-color: rgba($navy-black-d3, 0.5);
-      }
-    }
-  }
   .text-container{
     text-align: center;
     h2{
+      margin-top: 1rem;
       font-family: $big-shoulders;
       font-weight: $big-shoulders-black;
       font-size: 10em;
