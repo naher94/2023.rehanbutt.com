@@ -130,6 +130,31 @@
           box-shadow: $centered-shadow rgba($pure-black, 0.5);
         }
       }
+      .poster-barbie{
+        &:hover{
+          .barbie-gif{
+            display: block;
+          }
+        }
+        .barbie-gif{
+          position: absolute;
+          top: 30%;
+          rotate: -10deg;
+          display: none;
+        }
+      }
+      .poster-elemental{
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='80' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔥💧</text></svg>") 16 0,auto;
+      }
+      .poster-top-gun{
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>✈️</text></svg>") 16 0,auto;
+      }
+      .poster-glass-onion{
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🔍</text></svg>") 16 0,auto;
+      }
+      .poster-black-panther{
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🐈‍⬛</text></svg>") 16 0,auto;
+      }
     }
     .divider-container{
       margin-block-start: 2em;
