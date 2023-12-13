@@ -57,7 +57,7 @@
     border-radius: $tile-radius-medium;
     padding: 2rem;
     @include breakpoint(small only) {
-      padding: 1rem;
+      padding: 0;
     }
   }
   h2{
