@@ -7,7 +7,7 @@ header{
     padding: 1rem;
   }
   .number-container{
-    margin-top: -8em; //TODO
+    margin-top: -8em; //Shifts the 2023 down
     @include breakpoint(small only) {
       margin-top: -4em;
     }
@@ -22,7 +22,7 @@ header{
       margin-inline-start: calc($number-font-size * -0.11);
       @include breakpoint(xxlarge up){
         font-size: 62em;
-        margin-inline-start: -0.09em; //TODO
+        margin-inline-start: -0.09em; //Shifts the 2023 to the right
       }
     }
     span{
@@ -36,10 +36,6 @@ header{
         -webkit-text-fill-color: transparent;
       }
     }
-    // @include breakpoint(small only) {
-    //   font-size: 9rem;
-    //   margin-bottom: -2rem;
-    // }
   }
   .title-area{
     z-index: 2;

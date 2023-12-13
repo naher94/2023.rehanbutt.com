@@ -204,6 +204,7 @@
         position: relative;
         z-index: 2;
         // TODO figure out why this is not working
+        // This is to set up the inner border to contrast album with body-bg
         &::after{
           content: '';
           position: absolute;
@@ -255,7 +256,7 @@
           }
           .text-container{
             background-color: rgba($navy-black, 0.1);
-            margin-left: 2em; //TODO do we want this?
+            margin-left: 2em;
             @media (prefers-color-scheme: dark) {
               background-color: rgba($navy-black-l1, 0.5);
             }
@@ -302,13 +303,8 @@
     position: relative;
   }
   .musicnotes {
-    /*   display: block; */
-    /*   margin: auto; */
       position: absolute;
-      // width: 50%;
       width: 100%;
-      // min-width: 300px;
-      // height: 200px;
       height: 100%;
       border: 0px solid #000;
     }
