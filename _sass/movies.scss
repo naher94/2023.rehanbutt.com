@@ -189,6 +189,9 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
+        @include breakpoint(small only) {
+          font-size: 1.75em;
+        }
       }
     }
     .busy-day{
@@ -214,6 +217,9 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
+        @include breakpoint(small only) {
+          font-size: 1.75em;
+        }
       }
     }
     .first-watch{
@@ -232,6 +238,9 @@
       .number{
         font-weight: $big-shoulders-black;
         font-size: 2em;
+        @include breakpoint(small only) {
+          font-size: 1.75em;
+        }
       }
     }
     .stats-container{
