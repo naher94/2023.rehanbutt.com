@@ -123,6 +123,9 @@
           }
           @include breakpoint(small only) {
             scale: 1.5;
+            &:hover{
+              scale: 1.7;
+            }
           }
         }
       }
