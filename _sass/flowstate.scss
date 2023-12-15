@@ -16,10 +16,16 @@
     }
     .background-shapes{
       position: absolute;
-      height: 150%; //TODO fix this on mobile
+      height: 150%;
       top: -25%;
       left: -15%;
       aspect-ratio: 1106 / 1301;
+      @include breakpoint(small only){
+        height: auto;
+        scale: 1.75;
+        top: 5%;
+        left: -45%;
+      }
     }
     .text-area{
       z-index: 2;
