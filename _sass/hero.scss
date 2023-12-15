@@ -5,6 +5,7 @@
     margin-top: 1rem;
   }
   .content-area{
+    // TODO clean up these comments
     // border-radius: $tile-radius-medium;
     // padding: 3rem;
     @include breakpoint(small only) {
