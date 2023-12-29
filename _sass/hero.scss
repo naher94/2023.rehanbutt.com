@@ -6,12 +6,9 @@
   }
   .content-area{
     // TODO clean up these comments
-    // border-radius: $tile-radius-medium;
-    // padding: 3rem;
     @include breakpoint(small only) {
       // padding: 1rem;
     }
-    // background: radial-gradient(circle at bottom left, #DAF5FF 0%, #F7F0FF 100%);
     @media (prefers-color-scheme: dark) {
       // background: radial-gradient(circle at top left, rgb(25, 53, 51) 0%, rgb(43, 28, 60) 100%);
     }
