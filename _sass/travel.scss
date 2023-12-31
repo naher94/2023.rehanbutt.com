@@ -200,7 +200,7 @@
         grid-row: 5/7;
         svg{
           rotate: 10deg;
-          scale: 0.8;
+          scale: 0.9;
           @include breakpoint(small only) {
             margin-block-start: 5em;
             scale: 1.2;
