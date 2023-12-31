@@ -106,12 +106,38 @@
     animation: bob 7s ease-in-out infinite paused;
     animation-play-state: running;
     z-index: 3;
-    // TODO dark mode color the balloons
     @media (prefers-color-scheme: dark) {
       svg[class="balloon-bundle"]{
         g{
           path[stroke="#1F2937"]{
             stroke: #FFFFFF;
+          }
+          path[fill="#FA6400"]{
+            fill: #D85906;
+          }
+          path[fill="#F7B500"]{
+            fill: #D59E06;
+          }
+          path[fill="#B620E0"]{
+            fill: #8E1FB2;
+          }
+          path[fill="#E02020"]{
+            fill: #AE1F22;
+          }
+          path[fill="#32C5FF"]{
+            fill: #2B9BC9;
+          }
+          path[fill="#44D7B6"]{
+            fill: #39A892;
+          }
+          path[fill="#0091FF"]{
+            fill: #0674C9;
+          }
+          path[fill="#6DD400"]{
+            fill: #60B806;
+          }
+          path[fill="#FA0098"]{
+            fill: #C1077C;
           }
         }
       }
