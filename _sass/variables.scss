@@ -97,6 +97,8 @@ $semantic-colors:(
     jukebox-bg: $pure-white,
     jukebox-border: $navy-black-d4,
     movie-sub-description: $navy-black-l2,
+    hero-text: #6E7D93,
+    hero-text-stand-out: $navy-black,
   ),
   dark:(
     page-bg: $navy-black-d3,
@@ -114,6 +116,8 @@ $semantic-colors:(
     jukebox-bg: $navy-black,
     jukebox-border: $navy-black-l2,
     movie-sub-description: rgba($pure-white,0.5),
+    hero-text: #889AB4,
+    hero-text-stand-out: #E7F0FF,
   ),
 );
 

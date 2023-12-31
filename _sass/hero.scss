@@ -4,15 +4,6 @@
   @include breakpoint(small only) {
     margin-top: 1rem;
   }
-  .content-area{
-    // TODO clean up these comments
-    @include breakpoint(small only) {
-      // padding: 1rem;
-    }
-    @media (prefers-color-scheme: dark) {
-      // background: radial-gradient(circle at top left, rgb(25, 53, 51) 0%, rgb(43, 28, 60) 100%);
-    }
-  }
   .hero-text{
     font-family: $montserrat;
     font-weight: $montserrat-bold;
@@ -21,11 +12,11 @@
     margin: 0;
     color: semantic-color(text);
     color: $navy-black-l4;
-    color: #6E7D93;
+    color: semantic-color(hero-text);
     font-size: 1.25em;
     line-height: 1.5;
     span{
-      color: $navy-black;
+      color: semantic-color(hero-text-stand-out);
     }
   }
 }
