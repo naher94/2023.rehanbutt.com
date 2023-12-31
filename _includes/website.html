@@ -44,7 +44,7 @@
           <p>By the Numbers</p>
         </div>
         <div class="big-total">
-          <p class="numb">10.8K</p>
+          <p class="numb">11.3K</p>
           <p>Total site visits 2023</p>
         </div>
         <div class="busy-day">
@@ -53,9 +53,8 @@
         </div>
         <div class="country-visits">
           <p class="country-label">Most page views by country</p>
-          <!-- TODO get the real data for all of this -->
-          {% assign country-list = "(🇺🇸|United States|7274),(🇨🇳|China|403),(🇮🇳|India|319)" | remove: "(" | remove: ")" | split: ',' %}
-
+          {% assign country-list = "(🇺🇸|United States|7551),(🇮🇳|India|435),(🇨🇳|China|332)" | remove: "(" | remove: ")" | split: ',' %}
+          <!-- Data as of Dec 31st -->
           {% for country in country-list %}
           {% assign each = country | split: '|' %}
           <div class="country-container grid-x">
