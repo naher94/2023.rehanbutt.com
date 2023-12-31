@@ -116,6 +116,7 @@
     line-height: 1.2;
     @include breakpoint(small only) {
       font-size: 2rem;
+      padding: 0;
     }
     span{
       display: block;
