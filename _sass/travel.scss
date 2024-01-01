@@ -23,9 +23,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
     .page{
-      background: url(../img/travel-pattern.png), linear-gradient(125deg, rgba(200,224,255,1) 0%, rgba(255,230,211,1) 100%);
+      background: linear-gradient(125deg, rgba(200,224,255,1) 0%, rgba(255,230,211,1) 100%), url(../img/travel-pattern.png);
       @media (prefers-color-scheme: dark) {
-        background: url(../img/travel-pattern.png), #35445A;
+        background: linear-gradient(125deg, rgba(#35445A,1) 0%, rgba(#35445A,1) 100%), url(../img/travel-pattern.png);
       }
       background-blend-mode: multiply;
       border-radius: $tile-radius-medium;
