@@ -9,7 +9,7 @@ body {
     font-size: 16px;
   }
   @media (prefers-color-scheme: dark) {
-    background-color: $navy-black-d3;
+    background-color: semantic-color(page-bg);
   }
 }
 
@@ -164,6 +164,7 @@ ul {
     bottom: 0;
     background-color: semantic-color(link);
     transition: $run;
+    border-radius: 5px;
   }
 
   &:hover {

@@ -1,37 +1,51 @@
 header{
-  border-radius: $tile-radius-medium;
   padding: 3rem;
-  margin-block-start: 3rem;
-  color: semantic-color(header-content);
-  background: radial-gradient(circle at top left, rgba(102,255,246,1) 0%, rgba(169,101,255,1) 100%);
-  position: relative;
+  font-family: $big-shoulders;
+  font-weight: $big-shoulders-black;
+  overflow: hidden;
   @include breakpoint(small only) {
     padding: 1rem;
   }
-  @media (prefers-color-scheme: dark) {
-    background: radial-gradient(circle at top left, rgb(73, 185, 177) 0%, rgb(106, 64, 162) 100%);
-  }
-  .title-area{
-    margin-bottom: 5rem;
+  .number-container{
+    margin-top: -8em; //Shifts the 2023 down
     @include breakpoint(small only) {
-      margin-bottom: 3rem;
+      margin-top: -4em;
+    }
+    h1{
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,  minmax(10px, max-content));
+      font-family: $big-shoulders;
+      font-weight: $big-shoulders-black;
+      $number-font-size: 76vw;
+      font-size: $number-font-size;
+      margin-inline-start: calc($number-font-size * -0.11);
+      @include breakpoint(xxlarge up){
+        font-size: 62em;
+        margin-inline-start: -0.09em; //Shifts the 2023 to the right
+      }
+    }
+    span{
+      color: #BC2649;
+      background: linear-gradient(90deg,rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @media (prefers-color-scheme: dark) {
+        background: linear-gradient(90deg,rgb(188, 38, 73) 0%, rgb(141, 25, 52) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
+  .title-area{
+    z-index: 2;
+    color: semantic-color(text);
+  }
   .subtitle{
-    font-family: $big-shoulders;
-    font-weight: $big-shoulders-black;
     text-transform: uppercase;
     font-size: 1.5rem;
     @include breakpoint(small only) {
       font-size: 1rem;
-    }
-  }
-  h1{
-    font-size: 20rem;
-    margin-bottom: -6rem;
-    @include breakpoint(small only) {
-      font-size: 9rem;
-      margin-bottom: -2rem;
     }
   }
   .logo{
@@ -42,7 +56,7 @@ header{
         transform: scale(1.1);
       }
       g{
-        fill:semantic-color(header-content); //Changes the color of my logo inline
+        fill:semantic-color(text); //Changes the color of my logo inline
       }
       @include breakpoint(small only){
         height: 22px;

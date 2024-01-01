@@ -7,7 +7,8 @@ $tile-radius-medium: 20px;
 $tile-radius-big: 30px;
 $pill-radius: 500px;
 $recessed-shadow: 0px 10px 33px -10px;
-$centered-shadow:  0px 0px 20px 0px; 
+$centered-shadow:  0px 0px 20px 0px;
+$soft-shadow: 0px 0px 50px -20px;
 $base-font-size: 20px;
 
 // Colors
@@ -23,13 +24,8 @@ $instagram-purple: #C13584;
 $github-purple: #6f42c1;
 $F500px-green: #34bf49;
 
-$popcorn-yellow-1: #EFE8A5;
-$popcorn-yellow-2: #F6F0C9;
-$popcorn-yellow-3: #F4F8C7;
-
-$popcorn-yellow-1-dark: #cec78d;
-$popcorn-yellow-2-dark: #d7d2ab;
-$popcorn-yellow-3-dark: #d0d4a5;
+$flowstate-pink: #D12E6A;
+$flowstate-light-pink: #F6DBE6;
 
 $signature-teal: #12abc4;
 $navy-black: #1f2937;
@@ -89,65 +85,39 @@ $semantic-colors:(
     page-bg: $pure-white,
     text: $navy-black,
     text-inverted: $pure-white,
-    text-on-light-bg-always: $navy-black,
-    text-on-dark-bg-always: $pure-white,
     link: $signature-teal,
-    text-bg: $signature-teal-l6,
-    informational-pill: $navy-black,
-    actionable-pill: $signature-teal,
-    actionable-pill-hover: $signature-teal-d1,
     shadow: rgba($navy-black,0.75),
-    floating-card-bg: $pure-white,
-    footer-bg: $navy-black-l9,
-    footer-nav-hover: $navy-black-l8,
     footer-logo: $navy-black,
-    inline-code: $navy-black-l9,
-    recent-resources-bg: $signature-teal,
-    button-outline: $navy-black,
-    button-fill: $navy-black,
     selection-background: $signature-teal-l6,
-    joined-card-bg: $navy-black-l9,
-    button-primary: $signature-teal,
-    hero-card-bg: $navy-black,
     logo-header: $pure-white,
-    chat-bubble-them-bg:#E9E9EB,
     lastly-card-bg: #F7F7F7,
-    header-content: $pure-white,
-    popcorn-1: $popcorn-yellow-1,
-    popcorn-2: $popcorn-yellow-2,
-    popcorn-3: $popcorn-yellow-3,
+    movie-card-bg: $navy-black-l9,
+    movie-number-badge-bg: $navy-black, 
+    flowstate-bg: $flowstate-light-pink,
+    jukebox-bg: $pure-white,
+    jukebox-border: $navy-black-d4,
+    movie-sub-description: $navy-black-l2,
+    hero-text: #6E7D93,
+    hero-text-stand-out: $navy-black,
   ),
   dark:(
-    page-bg: #06080C,
+    page-bg: $navy-black-d3,
     text: $pure-white,
     text-inverted: $navy-black,
-    text-on-light-bg-always: $navy-black,
-    text-on-dark-bg-always: $pure-white,
     link: $signature-teal,
-    text-bg: $signature-teal-d4,
-    informational-pill: $navy-black-d6,
-    actionable-pill: $signature-teal-d1,
-    actionable-pill-hover: $signature-teal-d2,
     shadow: rgba($navy-black-d9,0.75),
-    floating-card-bg: $navy-black,
-    footer-bg: $navy-black-d2,
-    footer-nav-hover: $navy-black-d4,
     footer-logo: $pure-white,
-    inline-code: $navy-black-d8,
-    recent-resources-bg: $signature-teal-d2,
-    button-outline: $pure-white,
-    button-fill: $pure-white,
     selection-background: $signature-teal-d3,
-    joined-card-bg: $navy-black-d4,
-    button-primary: $signature-teal,
-    hero-card-bg: $navy-black-d2,
     logo-header: $pure-white,
-    chat-bubble-them-bg: #262629,
     lastly-card-bg: $navy-black-d2,
-    header-content: $navy-black-d3,
-    popcorn-1: $popcorn-yellow-1-dark,
-    popcorn-2: $popcorn-yellow-2-dark,
-    popcorn-3: $popcorn-yellow-3-dark,
+    movie-card-bg: $navy-black,
+    movie-number-badge-bg: $pure-white,
+    flowstate-bg: #542135,
+    jukebox-bg: $navy-black,
+    jukebox-border: $navy-black-l2,
+    movie-sub-description: rgba($pure-white,0.5),
+    hero-text: #889AB4,
+    hero-text-stand-out: #E7F0FF,
   ),
 );
 

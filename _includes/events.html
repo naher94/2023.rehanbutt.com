@@ -1,58 +1,36 @@
 <section class="events" id="events">
   <div class="grid-container">
     <div class="content-area">
-      <div class="grid-x align-center text-container">
+      <div class="bubble bubble__purple"></div>
+      <div class="bubble bubble__yellow"></div>
+      <div class="bubble bubble__orange"></div>
+      <div class="bubble bubble__red"></div>
+      <div class="bubble bubble__blue"></div>
+      <div class="bubble bubble__green"></div>
+      <div class="grid-x text-container">
         <div class="cell">
-          <h2>Here. There. Knowledge everywhere.</h2>
+          <h2><span>Knowledge.</span><span>Knowledge.</span>Knowledge.</h2>
         </div>
         <div class="cell medium-8">
-          <p>Attended several industry events this year, learning lots of new things along the way.</p>
+          <p>Attended several industry events this year, soaking up of new things along the way.</p>
         </div>
       </div>
+      {% assign array-list = "(uxdx.svg|UXDX Logo),(config.svg|Config Logo),(siggraph.svg|Siggraph Logo),(leadership-design.svg|Leadership by Design Logo),(chicago-camps.svg|Chicago Camps Logo)" | remove: "(" | remove: ")" | split: ',' %}
       <div class="logo-container logo-slider">
+        <div class="gradient-container"></div>
         <div class="slide-track">
-          <div class="slide">
-            <img class="ces" src="/img/ces-logo.svg" alt="CES Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/ixda-logo.svg" alt="IXDA Logo">
-          </div>
-          <div class="slide leadership-design">
-            <img src="/img/leadership-design-logo.svg" alt="Leadership by Design Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/chicagocamps-logo.svg" alt="Chicago Camps Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/outlier-logo.svg" alt="Outlier Data Viz Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/productcamp-logo.svg" alt="Product Camp Pittsburgh Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/clarity-logo.svg" alt="Clarity Conference Logo">
-          </div>
-          <div class="slide">
-            <img class="ces" src="/img/ces-logo.svg" alt="CES Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/ixda-logo.svg" alt="IXDA Logo">
-          </div>
-          <div class="slide leadership-design">
-            <img src="/img/leadership-design-logo.svg" alt="Leadership by Design Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/chicagocamps-logo.svg" alt="Chicago Camps Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/outlier-logo.svg" alt="Outlier Data Viz Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/productcamp-logo.svg" alt="Product Camp Pittsburgh Logo">
-          </div>
-          <div class="slide">
-            <img src="/img/clarity-logo.svg" alt="Clarity Conference Logo">
-          </div>
+          {% for item in array-list %}
+            {% assign each = item | split: '|' %}
+            <div class="slide">
+              <img class="ces" src="/img/events/{{each[0]}}" alt="{{each[1]}}">
+            </div>
+          {% endfor %}
+          {% for item in array-list %}
+            {% assign each = item | split: '|' %}
+            <div class="slide">
+              <img class="ces" src="/img/events/{{each[0]}}" alt="{{each[1]}}">
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>

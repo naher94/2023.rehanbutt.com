@@ -1,186 +1,102 @@
-{% assign movie-list = "Spider-Man No Way Home, No Time to Die, Strange World, Thor: Love and Thunder, Turning Red" | split: ',' %}
-
 <section class="movies" id="movies">
   <div class="grid-container">
     <div class="grid-x content-area">
-      <div class="title-container">
-        <div class="grid-x align-right">
-          <div class="grid-x cell shrink align-right date-wrapper">
-            <span class="cell">as of</span>
-            <span class="cell">Dec 12th*</span>
-          </div>
-          <h2 class="cell shrink">film log</h2>
-        </div>
-      </div>
-      <div class="bucket-container">
-        {% capture name %}10{% endcapture %}
-        {% include popcorn.svg %}
-        {% capture name %}11{% endcapture %}
-        {% include popcorn.svg %}
-        <img src="/img/popcorn-bucket-empty.svg" alt="An illustration of an empty red and white striped popcorn bucket">
-      </div>
-      <div class="top-picks">
-        <!-- TODO hover on posters scale up the movie title -->
-        <div class="poster-container">
-          <div class="poster-box">
-            <div class="poster">
-              <p>1</p>
-              <img src="/img/movie-spiderman.jpg" alt="Spider-Man No Way Home Poster">
-            </div>
-          </div>
-          <div class="cell grid-x align-right poster-box">
-            <div class="poster cell">
-              <p>2</p>
-              <!-- TODO bug in dark mode number falls behind the poster -->
-              <img src="/img/movie-no-time-to-die.jpg" alt="James Bond: No Time to Die Poster">
-              {% capture name %}1{% endcapture %}
-              {% include popcorn.svg %}
-              {% capture name %}2{% endcapture %}
-              {% include popcorn.svg %}
-            </div>
-          </div>
-          <div class="cell poster-box">
-            <div class="poster">
-              <p>3</p>
-              <img src="/img/movie-strange-world.jpg" alt="Disney's Strange World Poster">
-              {% capture name %}3{% endcapture %}
-              {% include popcorn.svg %}
-              {% capture name %}14{% endcapture %}
-              {% include popcorn.svg %}
-            </div>
-          </div>
-        </div>
-        <div class="movie-list-container">
-          <div class="movie-list cell grid-x">
+      <div class="overhang cell grid-x">
+        <div class="grid-x cell title-container">
+          <div class="grid-x cell">
             <div class="cell">
-              <h3>top picks<span>2022</span></h3>
+              <h2>film log</h2>
             </div>
-            {% assign i = 1 %}
-            {%- for movie in movie-list -%}
-            <div class="movie-item cell grid-x align-middle">
-              <div class="number cell grid-x align-middle align-center shrink">
-                <p class="cell">{{i}}</p>
-              </div>
-              <span class="title cell auto">{{movie}}</span>
+            <div class="cell title2">
+              <h3>Top Picks <span>2023</span></h3>
             </div>
-            {% assign i = i | plus:1 %}
-            {%- endfor -%}
           </div>
         </div>
-      </div>
-      <div class="wrap-party grid-x">
-        <div class="ticket-wrapper">
-          <div class="back-ticket-container cell">
-            <div class="ticket">
-              <div class="content grid-x">
-                <div class="left cell small-3 grid-x align-middle align-center">
-                  <div class="cell">
-                    <p>Los Angeles <br> Nov 2022</p>
+        <div class="top-picks grid-x cell align-center">
+          <div class="poster-container grid-x cell shrink align-middle">
+            <div class="cell shrink poster-box small-order-3">
+              <div class="poster grid-x cell poster-barbie">
+                <div class="cell grid-x align-center small-order-2">
+                  <div class="number cell">
+                    <p>1</p>
                   </div>
                 </div>
-                <div class="right cell auto">
-                  <img src="/img/theatre-sign.jpg" alt="Photo of the Los Angeles Theatre sign that says Congratulations Strange World">
+                <img src="/img/movies/barbie-poster.jpg" alt="Barbie Poster">
+                <img src="/img/movies/hi-barbie.gif" alt="Hi Barbie Clip" class="barbie-gif">
+              </div>
+            </div>
+            <div class="cell shrink poster-box small-order-2">
+              <div class="poster grid-x cell poster-elemental">
+                <div class="cell grid-x align-center small-order-2">
+                  <div class="number cell">
+                    <p>2</p>
+                  </div>
                 </div>
+                <img src="/img/movies/elemental-poster.jpg" alt="Disney & Pixar's Elemental Poster">
+              </div>
+            </div>
+            <div class="cell shrink poster-box small-order-4">
+              <div class="poster grid-x cell poster-top-gun">
+                <div class="cell grid-x align-center small-order-2">
+                  <div class="number cell">
+                    <p>3</p>
+                  </div>
+                </div>
+                <img src="/img/movies/topgun-poster.jpg" alt="Top Gun: Maverick's Poster">
+              </div>
+            </div>
+            <div class="cell shrink poster-box small-order-1">
+              <div class="poster grid-x cell poster-glass-onion">
+                <div class="cell grid-x align-center small-order-2">
+                  <div class="number cell">
+                    <p>4</p>
+                  </div>
+                </div>
+                <img src="/img/movies/glassonion-poster.jpg" alt="Glass Onion Poster">
+              </div>
+            </div>
+            <div class="cell shrink poster-box small-order-5">
+              <div class="poster grid-x cell poster-black-panther">
+                <div class="cell grid-x align-center small-order-2">
+                  <div class="number cell">
+                    <p>5</p>
+                  </div>
+                </div>
+                <img src="/img/movies/blackpanther2-poster.jpg" alt="Marvel's Black Panther: Wakanda Forever Poster">
               </div>
             </div>
           </div>
-          <div class="main-ticket-container cell grid-x">
-            <div class="ticket-left cell auto">
-              <div class="content">
-                <img src="/img/splat-scene4.jpg" alt="A photo of a installation of Disney's Strange World featuring Splat">
-              </div>
-            </div>
-            <div class="ticket-right cell shrink">
-              <div class="content">
-                <div class="text-container">
-                  <p>Wrap</p>
-                </div>
-                <div class="image-container">
-                  <img src="/img/strange-world-logo.png" alt="Disney's Strange World Logo">
-                </div>
-                <div class="text-container">
-                  <p>Party</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="popcorn-wrapper cell">
-          {% capture name %}4{% endcapture %}
-          {% include popcorn.svg %}
-          {% capture name %}5{% endcapture %}
-          {% include popcorn.svg %}
         </div>
       </div>
-      <div class="total-watched">
-        <div class="text-container">
-          <p>watched</p>
-          <p class="number">120</p> 
-          <p>featured films</p>
-          <p class="sub-description"><i class="fas fa-history"></i> 49% were rewatches</p>
-        </div>
-        {% capture name %}6{% endcapture %}
-        {% include popcorn.svg %}
-        {% capture name %}7{% endcapture %}
-        {% include popcorn.svg %}
-      </div>
-      <div class="busy-day">
-        <div class="text-container">
-          <p>Saturday</p>
-          <p class="number">Jun 18th</p> 
-          <p>was the busiest watch day with 6 movies</p>
-        </div>
-        <div class="average grid-x align-middle align-center">
-          <div class="monthly grid-x align-middle align-center">
-            {% capture name %}8{% endcapture %}
-            {% include popcorn.svg %}
-            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">10</p>
-              <p class="description cell small-4">monthly average</p>
-            </div>
-          </div>
-          <div class="daily grid-x align-middle align-center">
-            {% capture name %}9{% endcapture %}
-            {% include popcorn.svg %}
-            <div class="popcorn-text-container cell shrink grid-x align-center align-middle">
-              <p class="number cell shrink">4</p>
-              <p class="description cell small-5">weekly average</p>
-            </div>
-          </div>
+      <div class="divider-container grid-x cell align-center">
+        <div class="cell shrink">
+          <div class="divider-line"></div>
         </div>
       </div>
-      <div class="first-watch">
-        <div class="text-container">
-          <p class="number">Yesterday</p> 
-          <p>1st watched</p>
-        </div>
-        <div class="poster">
-          <img src="/img/movie-yesterday.jpg" alt="Yesterday Poster">
-        </div>
-        {% capture name %}12{% endcapture %}
-        {% include popcorn.svg %}
-        {% capture name %}13{% endcapture %}
-        {% include popcorn.svg %}
-      </div>
-      <div class="rewatch">
-        <div class="text-container">
-          <p class="grid-x align-middle"><i class="fas fa-history"></i> rewatched</p>
-          <p class="number">Harry Potter</p> 
-          <p>collection</p>
-        </div>
-        <div class="poster-stack">
-          <div class="poster-hold">
-            <div class="poster">
-              <img src="/img/movie-harry-potter3.jpg" alt="Harry Potter and the Prisoner of Azkaban poster">
-            </div>
-            <div class="poster">
-              <img src="/img/movie-harry-potter2.jpg" alt="Harry Potter and the Chamber of Secrets poster">
-            </div>
-            <div class="poster">
-              <img src="/img/movie-harry-potter1.jpg" alt="Harry Potter and the Sorcerer Stone poster">
-            </div>
+      <div class="stats-container grid-x cell">
+        <div class="total-watched cell medium-shrink">
+          <div class="text-container">
+            <p class="sub-description"><i class="fas fa-history"></i> 31% were rewatches</p>
+            <p class="number">185</p> 
+            <p>featured films watched</p>
+            <!-- As of Dec 31st -->
           </div>
         </div>
+        <div class="busy-day cell medium-auto grid-x align-bottom">
+          <div class="text-container cell shrink">
+            <p class="sub-description"><i class="fas fa-equals"></i> Tie between</p>
+            <p class="number">Jan 16th & Jan 17th</p> 
+            <p>for the busiest watch days with 6 movies</p>
+          </div>
+        </div>
+        <div class="first-watch cell medium-shrink grid-x align-bottom">
+          <div class="text-container">
+            <p class="sub-description"><i class="fas fa-plane"></i> Watched at 35,000ft</p>
+            <p class="number">House of Gucci</p> 
+            <p>1st watched</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

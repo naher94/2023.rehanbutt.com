@@ -1,110 +1,92 @@
 .lastly{
-  margin-top: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   @include breakpoint(small only){
-    margin-top: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-size: 0.5em;
   }
-  .card{
-    background-color: #F3F3F3;
-    border-radius: $tile-radius-medium;
-    margin-bottom: 0;
-    $card-padding: 2rem;
-    $card-padding-mobile: 1rem;
-    @media (prefers-color-scheme: dark) {
-      background-color: $navy-black;
-    }
-    @include breakpoint(small only){
-      padding: $card-padding-mobile;
-    }
-    padding: $card-padding;
-    color: $navy-black;
-    border: none;
-    .color-field{
-      background: radial-gradient(circle at 0 0, #BC2649, #8D1934);
-      padding: 3em;
-      border-radius: 10px;
-      @include breakpoint(small only){
-        border-radius: 0.5rem;
-      }
-      @media (prefers-color-scheme: dark) {
-        background: radial-gradient(circle at 0 0, #621325, #430917);
-        
-      }
-    }
+  .title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h2{
       font-family: $big-shoulders;
       font-weight: $big-shoulders-black;
       font-size: 5em;
-      color: $pure-white;
-      @include breakpoint(small only){
-        line-height: 1;
-        padding: 0;
-      }
-    }
-    h3{
-      font-family: $lato;
-      line-height: 1.2;
-      font-size: 2em;
-      color: $pure-white;
-    }
-    .polaroid-chin{
-      padding-top: $card-padding;
-      color: semantic-color(text);
-      @include breakpoint(small only){
-        padding-top: $card-padding-mobile;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        padding-bottom: 0;
-      }
-      .hidden-mickey{
-        font-family: $lato;
-        font-size: 1.5rem;
-        @include breakpoint(small only){
-          font-size: 1rem;
-        }
-        .question{
-          font-weight: $lato-bold;
-        }
-      }
-      p{
-        padding: 0;
-        margin: 0;
-        margin-bottom: 0;
+      @include breakpoint(small only) {
+        font-size: 10em;
         line-height: 1.2;
       }
     }
+  }
+  .card{
+    border-radius: $tile-radius-medium;
+    background-color: #AD1457;
+    @media (prefers-color-scheme: dark) {
+      background-color: #880E4F;
+    }
+
+    color: $pure-white;
+    padding: 2em;
+    border: none;
+    margin-bottom: 0;
+    @include breakpoint(small only) {
+      padding: 3em;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+    }
     .share-area{
-      font-family: $zilla;
-      @include breakpoint(small only){
-        font-size: 1rem;
-        margin-top: 1em;
-        justify-content: space-between;
-      }
+      margin-block-start: 2em;
       .words{
-        margin-inline-end: 0.5rem;
+        margin-inline-end: 1em;
+        .enjoyed{
+          font-weight: $lato-black;
+        }
       }
-      .enjoyed{
-        font-weight: $zilla-bold;
+      .icon-wrapper{
+        @include breakpoint(small only) {
+          margin-top: 2em;
+        }
+      }
+      .link-wrapper{
+        aspect-ratio: 1/1;
+        max-width: 3em;
+        @include breakpoint(small only) {
+          max-width: 8em;
+        }
       }
       a{
-        color: semantic-color(text);
+        color: $pure-white;
         &:hover{
           .share-item{
             background-color: rgba($navy-black, 0.10);
             @media (prefers-color-scheme: dark) {
-              background-color: rgba($navy-black-l1, 0.75);
+              background-color: rgba($navy-black, 0.20);
             }
           }
         }
         .share-item{
           aspect-ratio: 1/1;
-          padding: 0.75em;
+          padding: 0.5em;
+          max-width: 3em;
           border-radius: $pill-radius;
           text-align: center;
           transition: $sprint;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           i{
             font-size: 1.3em;
-            vertical-align: text-top;
+          }
+          @include breakpoint(small only) {
+            max-width: 8em;
+            i{
+              font-size: 4em;
+            }
           }
         }
       }
