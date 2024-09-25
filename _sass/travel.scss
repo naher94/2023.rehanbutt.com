@@ -210,6 +210,10 @@
       }
     }
     .divider{
+      svg{
+        width: 1em;
+        fill: semantic-color(text);
+      }
       @include breakpoint(small only) {
         div.cell.shrink{
           &:nth-of-type(n+7){ // all children from the 7th position onward
@@ -236,6 +240,12 @@
           i{
             font-size: 0.5em;
             vertical-align: middle;
+          }
+          svg{
+            width: 0.5em;
+            fill: semantic-color(text);
+            vertical-align: middle;
+            margin-right: 0.1em;
           }
         }
         .text-top{
