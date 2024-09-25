@@ -77,15 +77,16 @@
           text-align: center;
           transition: $sprint;
           display: flex;
-          flex-direction: column;
           justify-content: center;
-          i{
-            font-size: 1.3em;
+          svg{
+            width: 1.3em;
+            fill: $pure-white;
+            display: flex;
           }
           @include breakpoint(small only) {
             max-width: 8em;
-            i{
-              font-size: 4em;
+            svg{
+              width: 4em;
             }
           }
         }
