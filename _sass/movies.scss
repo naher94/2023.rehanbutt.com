@@ -249,8 +249,13 @@
         font-weight: $zilla-light;
         font-size: 0.75em;
         color: semantic-color(movie-sub-description);
-        i{
-          font-size: 0.6em;
+        // i{
+        //   font-size: 0.6em;
+        // }
+        svg{
+          width: 0.6em;
+          fill: semantic-color(movie-sub-description);
+          margin-right: 0.25em;
         }
       }
     }
