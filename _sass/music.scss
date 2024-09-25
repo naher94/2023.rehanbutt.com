@@ -285,8 +285,10 @@
           }
           .title{
             font-weight: $montserrat-black;
-            i{
-              font-size: 0.75em;
+            svg{
+              margin-left: 0.25em;
+              width: 0.75em;
+              fill: semantic-color(text);
             }
           }
           .artist{

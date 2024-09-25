@@ -41,6 +41,13 @@
           font-size: 1.5em;
         }
       }
+      svg{
+        width: 2.5em;
+        fill: semantic-color(text);
+        @include breakpoint(small only) {
+          width: 1.5em;
+        }
+      }
       h2{
         font-family: $big-shoulders;
         font-weight: $big-shoulders-black;
